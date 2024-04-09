@@ -32,3 +32,18 @@ h1 {
     display: block;
     text-align: right;
 }
+
+
+/* Add this for the image container */
+.image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin: 20px 0; /* Add some space above and below the image container */
+}
+
+/* Adjustments to .profile-photo for sizing and potential additional styling */
+.profile-photo {
+    max-width: 50%; /* Adjust this to control the image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounds the corners of the image */
+}
