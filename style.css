@@ -1,5 +1,5 @@
 body {
-    background-image: url('dnaBorder.png'), url('dnaBorder.png');
+    background-image: url('./images/dnaBorder.png'), url('./images/dnaBorder.png');
     background-repeat: repeat-y, repeat-y;
     background-position: 20px top, right 20px top;
     background-color: #8AC16A;
@@ -7,7 +7,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     border: 10px solid #249C54;
-    padding: 100px;
+    padding: 50px;
     margin: 0; 
     min-height: 100vh;
 }
