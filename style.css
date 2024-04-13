@@ -10,7 +10,10 @@ body {
     color: white;
     border: 10px solid #249C54;
     padding: 0px;
+    padding-left: 80px;
+    padding-right: 80px;
     margin: 0;
+    text-align: center;
     min-height: 100vh;
 }
 
@@ -72,8 +75,8 @@ nav { /* flex container: */
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    background-color: rgba(36, 156, 84, 0.7); /* Example with semi-transparent background */
+    margin: 0px;
+    background-color: rgba(36, 156, 84); /* Example with semi-transparent background */
     overflow: hidden;
     display: flex; /* Makes the <ul> a flex container */
     width: 100%; /* Ensures the <ul> takes up the full width of the <nav> */
@@ -97,4 +100,39 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ddd;
     color: #249C54;
+}
+
+
+/* Progress container styling */
+.progress-container {
+    width: 50%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the progress bar */
+    text-align: center;
+}
+
+progress {
+    width: 100%; /* Makes the progress bar take full width of its container */
+    height: 20px; /* Sets a fixed height for the progress bar */
+}
+
+progress[value] {
+    /* Resets the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #26a69a;
+    border-radius: 10px;
+}
+
+progress[value]::-moz-progress-bar {
+    background-color: #26a69a;
+    border-radius: 10px;
 }
