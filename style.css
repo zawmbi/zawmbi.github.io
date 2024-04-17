@@ -26,30 +26,47 @@ h1 {
     display: flex;
     flex-wrap: wrap; /* Allows cards to wrap to the next line if the container's width is not enough */
     justify-content: center; /* Center the cards horizontally */
-    gap: 20px; /* Adds space between the cards */
+    gap: 15px; /* Adds space between the cards */
     padding-left: 50px; 
     padding-right: 50px;
 }
 
 
-/* visual settings for each clickable card */
+/* Visual settings for each clickable card */
 .card {
-    background-color: #249C54;
-    padding: 50px;
-    margin: 20px; 
-    width: 200px; 
-    border-radius: 100px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #249C54; /* Green background color */
+    padding: 20px; /* Padding around the content inside the card */
+    margin: 10px; /* Margin around the card */
+    width: 100px; /* Width of the card */
+    height: 100px; /* Height of the card to make it square */
+    border-radius: 10px; /* Rounded corners */
+    border: 10px solid #249C54; /* Dark green border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    display: flex; /* Makes the card a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Ensures text within the card is centered */
 }
-
 
 .card a {
-    color: #ffff;
-    text-decoration: none;
-    display: block;
-    text-align: center;
+    color: #ffff; /* White text color */
+    text-decoration: none; /* No underline */
+    display: block; /* Makes the link fill the entire card */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
 }
 
+.card:hover {
+    background-color: #1e8c47; /* Darker shade of green on hover */
+    border-color: #1e8c47; /* Change border color on hover */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+/* Optional: Styling for the content inside the card for additional control */
+.card-content {
+    padding: 10px; /* Padding inside the card content */
+}
 
 /* Add this for the image container */
 .image-container {
