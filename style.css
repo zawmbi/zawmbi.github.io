@@ -54,7 +54,6 @@ h1 {
     text-decoration: none; /* No underline */
     display: block; /* Makes the link fill the entire card */
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
 }
 
 .card:hover {
