@@ -1,7 +1,7 @@
 body {
     position: relative; /* Ensure the body or the parent container is positioned */
     z-index: 1; /* Higher z-index ensures it's above the default layering */
-    background-image: url('./images/dnaBorder.png'), url('./images/dnaBorder.png');
+    background-image: url('./attachments/dnaBorder.png'), url('./attachments/dnaBorder.png');
     background-repeat: repeat-y, repeat-y;
     background-position: 20px top, right 20px top;
     background-color: #8AC16A;
