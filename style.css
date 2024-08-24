@@ -27,9 +27,10 @@ h1 {
     flex-wrap: wrap; /* Allows cards to wrap to the next line if the container's width is not enough */
     justify-content: center; /* Center the cards horizontally */
     gap: 15px; /* Adds space between the cards */
-    padding-left: 50px; 
-    padding-right: 50px;
+    padding-left: 20px; 
+    padding-right: 20px;
 }
+
 
 
 /* Visual settings for each clickable card */
