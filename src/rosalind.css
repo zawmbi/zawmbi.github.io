@@ -1,0 +1,44 @@
+/* add padding to the paragraph and content on this page */
+
+*{
+    font-family: 'Courier New', Courier, monospace; 
+  }
+  
+  
+
+:root {
+--background-light-green: #8AC16A;
+--dark-green: #249C54;
+}
+
+/* Base styles for larger screens */
+.rosalind-text p {
+  padding: 0px 200px; /* No internal padding */
+  font-size: 20px; /* Font size */
+  margin: 0px 0px; /* 200px margin from the edges */
+}
+
+
+
+.progress-container {
+    padding: 0px 100px;
+    font-size: 20px;
+}
+
+progress {
+  width: 50%;
+  height: 20px;
+  appearance: none; /* Remove browser-specific styles */
+  -webkit-appearance: none; /* For WebKit-based browsers, including Edge */
+  border: 1px solid var(--dark-green); /* Add a green border */
+  border-radius: 3px; /* Optional: Rounded corners */
+  background-color: #e0e0e0; /* Fallback background for the bar */}
+
+progress::-webkit-progress-value {
+  background-color: #095f2a; /* progress color */
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e0e0e0; /* background of progress bar color */
+  border-radius: 100px;
+}

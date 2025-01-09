@@ -1,0 +1,151 @@
+
+*{
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+
+
+:root {
+  --background-light-green: #8AC16A;
+  --dark-green: #249C54;
+}
+
+
+main h1 {
+  margin-top: 5rem; /* Adjust spacing above the h1 */
+  margin-bottom: 0rem; /* Add space between the h1 and cards */
+  text-align: center; /* Center align the text */
+}
+
+
+/* deals with the navbar heading */
+header {
+  display: flex;
+  align-items: center;        /* center items vertically */
+  justify-content: space-between; /* separate logo on left, links on right */
+  height: auto;              /* chooses navbar height based on screen size */
+  padding: 0rem 1.5rem;           /* left/right padding only */
+  background-color: var(--dark-green);
+  color: white;
+  overflow: hidden;
+}
+
+body {
+  position: relative; 
+  background-image: url('./attachments/dnaBorder.png'), url('./attachments/dnaBorder.png');
+  background-repeat: repeat-y, repeat-y;
+  background-position: 20px top, right 20px top;
+  background-color: var(--background-light-green);
+  background-size: 50px, 50px; 
+  font-family: 'Courier New', Courier, monospace; 
+  color: white;
+  border: 10px solid var(--dark-green);  /* border outside of the whole site */
+  padding: 0px;              /* padding from the top of the browser */
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0px 20px;  /* space between links */
+  font-size: 1.3rem;
+  padding: 0px 10px;  /* controls the link’s highlight box size */
+  border-radius: 6px; /* rounds the corners */
+  text-decoration: none; /* removes the underline for each link */
+  color: white;
+  transition: background-color 0.5s ease;
+
+}
+
+nav a:hover {
+  /* background-color: var(--background-light-green); */
+  color: white; 
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); popping out shadow effect */
+  transform: scale(1.05); /* enlarges the link */
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease; /* smooth transitions */
+  font-weight: bold;
+
+}
+
+
+header .nav-btn {
+  padding: 0px;
+  cursor: auto;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  visibility: hidden; /* navbar buttons will invisible while loading */
+  opacity: 0; /* navbar buttons will invisible while loading */
+  font-size: 1.8rem;
+}
+
+
+/* css for the leaf logo */
+.logo {
+  display: inline-block; /* makes the logo a block element for padding and hover effects */
+  position: relative; /* required for hover effect */
+  cursor: auto;
+  text-decoration: none; /* removes underline */
+}
+
+.logo img {
+  height: 50px; /* adjust the size of the logo */
+  width: 50px;
+  margin-left: -15px;
+  transition: transform 0.5s ease, background-color 0.5s ease; 
+}
+
+.logo:hover {
+
+  transform: scale(1.1); /* enlarges the entire logo and background slightly */
+  transition: background-color 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+}
+
+
+
+@media only screen and (max-width: 1024px) /* this corresponds to small screens! */ 
+{
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1; /* hamburger button visibility */
+
+  }
+
+  header nav {
+    position: fixed;
+    top: 0; /* makes the tiny screen show the hamburger's menu correctly; don't delete */
+    left: 0; 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background-color:var(--dark-green);
+    transition: 1s;
+    transform: translateY(-100vh); 
+
+  }
+
+  header .responsive_nav {
+    transform: none;
+
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+  }
+
+  nav a{
+    font-size: 1.5rem;
+
+  }
+
+}
+
