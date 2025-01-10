@@ -15,7 +15,8 @@ function App() {
   
   return (
     <React.Fragment>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
+
         <NavBar />
         <Routes>
           <Route path = "/" element = {
