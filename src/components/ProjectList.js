@@ -9,36 +9,37 @@ const ProjectList = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [sortOption, setSortOption] = useState("");
 
-  // extract  skills and coding languages from the projects jsons dynamically
+  // Extract unique skills and coding languages from the projects dynamically
   const allSkills = [...new Set(projects.flatMap((project) => project.skills))];
   const allLanguages = [...new Set(projects.flatMap((project) => project.languages))];
 
-  // filtering for skills and langugaes
-  let filteredProjects = projects.filter(
-    (project) =>
-      (!selectedSkill || project.skills.includes(selectedSkill)) &&
-      (!selectedLanguage || project.languages.includes(selectedLanguage))
-  );
+  // Function to get filtered and sorted projects
+  const getFilteredAndSortedProjects = () => {
+    // Apply filtering
+    let filtered = projects.filter(
+      (project) =>
+        (!selectedSkill || project.skills.includes(selectedSkill)) &&
+        (!selectedLanguage || project.languages.includes(selectedLanguage))
+    );
 
-// sorting logic
+    // Apply sorting
     if (sortOption === "alphabeticalAsc") {
-        filteredProjects.sort((a, b) => a.title.localeCompare(b.title));
+      filtered.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortOption === "alphabeticalDesc") {
-        filteredProjects.sort((a, b) => b.title.localeCompare(a.title));
+      filtered.sort((a, b) => b.title.localeCompare(a.title));
     } else if (sortOption === "dateCompletedAsc") {
-        filteredProjects.sort((a, b) => new Date(a.dateCompleted) - new Date(b.dateCompleted));
+      filtered.sort((a, b) => new Date(a.dateCompleted) - new Date(b.dateCompleted));
     } else if (sortOption === "dateCompletedDesc") {
-        filteredProjects.sort((a, b) => new Date(b.dateCompleted) - new Date(a.dateCompleted));
-    } else if (sortOption === "") {
-        // Reset to default order (by ID or any natural order in the array)
-        filteredProjects = [...projects];
+      filtered.sort((a, b) => new Date(b.dateCompleted) - new Date(a.dateCompleted));
     }
-  
+
+    return filtered; // Return filtered and sorted projects
+  };
 
   return (
     <div className="project-list">
       <div className="filter-sort-container">
-        {/* filter by skill */}
+        {/* Filter by Skill */}
         <Autocomplete
           options={allSkills}
           onChange={(event, value) => setSelectedSkill(value || "")}
@@ -46,7 +47,7 @@ const ProjectList = () => {
           className="filter-box"
         />
 
-        {/* filter by coding language */}
+        {/* Filter by Coding Language */}
         <Autocomplete
           options={allLanguages}
           onChange={(event, value) => setSelectedLanguage(value || "")}
@@ -54,28 +55,27 @@ const ProjectList = () => {
           className="filter-box"
         />
 
-        {/* sort options */}
+        {/* Sort Options */}
         <FormControl className="filter-box">
-            <InputLabel id="sort-label">Sort By</InputLabel>
-            <Select
-                labelId="sort-label"
-                value={sortOption}
-                onChange={(event) => setSortOption(event.target.value)}
-                label="Sort By"
-            >
-                <MenuItem value="">Clear Sorting</MenuItem> {/* Add this option */}
-                <MenuItem value="alphabeticalAsc">Alphabetical (A - Z)</MenuItem>
-                <MenuItem value="alphabeticalDesc">Alphabetical (Z - A)</MenuItem>
-                <MenuItem value="dateCompletedDesc">Date Completed (New to Old)</MenuItem>
-                <MenuItem value="dateCompletedAsc">Date Completed (Old to New)</MenuItem>
-            </Select>
+          <InputLabel id="sort-label">Sort By</InputLabel>
+          <Select
+            labelId="sort-label"
+            value={sortOption}
+            onChange={(event) => setSortOption(event.target.value)}
+            label="Sort By"
+          >
+            <MenuItem value="">Clear Sorting</MenuItem>
+            <MenuItem value="alphabeticalAsc">Alphabetical (A - Z)</MenuItem>
+            <MenuItem value="alphabeticalDesc">Alphabetical (Z - A)</MenuItem>
+            <MenuItem value="dateCompletedDesc">Date Completed (New to Old)</MenuItem>
+            <MenuItem value="dateCompletedAsc">Date Completed (Old to New)</MenuItem>
+          </Select>
         </FormControl>
-
       </div>
 
-      {/* displays the filtered/sorted projects */}
+      {/* Display Filtered and Sorted Projects */}
       <div className="project-cards-container">
-        {filteredProjects.map((project) => (
+        {getFilteredAndSortedProjects().map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>

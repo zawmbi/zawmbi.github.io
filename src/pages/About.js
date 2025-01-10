@@ -24,7 +24,7 @@ function About(){
                 <br/>
                 <p className="about-paragraph">
                     I am a full-time student at the University of Illinois at Chicago studying Data 
-                    Science with a concentration in Bioinformatics. In addition to my course work, I work 
+                    Science with a concentration in Bioinformatics, projected to graduate in May 2025. In addition to my courses, I work 
                     part-time as an undergraduate research assistant of a computational biology lab focused 
                     on plant transcriptomics. Aside from school and research, 
                     I am part of a coding role in the early stages of a megaproject and collaborating with a large group of 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../cards.css"; // Optional: Separate CSS for card styling
 
 function Cards() {
@@ -8,23 +9,23 @@ function Cards() {
       <div className="cards-container">
         {/* Projects */}
         <div className="card">
-          <a href="./projects" style={{ textAlign: "center", color: "white" }}>Projects</a>
+          <Link to="./projects" style={{ textAlign: "center", color: "white" }}>Projects</Link>
         </div>
         {/* Research */}
         <div className="card">
-          <a href="./research" style={{ textAlign: "center", color: "white" }}>Research</a>
+          <Link to="./research" style={{ textAlign: "center", color: "white" }}>Research</Link>
         </div>
         {/* Rosalind */}
         <div className="card">
-          <a href="./rosalind" style={{ textAlign: "center", color: "white" }}>Rosalind Problems</a>
+          <Link to="./rosalind" style={{ textAlign: "center", color: "white" }}>Rosalind Problems</Link>
         </div>
         {/* About me */}
         <div className="card">
-          <a href="./about" style={{ textAlign: "center", color: "white" }}>About</a>
+          <Link to="./about" style={{ textAlign: "center", color: "white" }}>About</Link>
         </div>
         {/* Contact me */}
         <div className="card">
-          <a href="./contact" style={{ textAlign: "center", color: "white" }}>Contact Me</a>
+          <Link to="./contact" style={{ textAlign: "center", color: "white" }}>Contact Me</Link>
         </div>        
       </div>
 
