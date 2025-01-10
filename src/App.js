@@ -1,4 +1,7 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
 import './App.css'
 import React from 'react'
 import NavBar from './components/NavBar.js' /* components start with capitals ONLY */
@@ -9,6 +12,14 @@ import Projects from "./pages/Projects.js";
 import Rosalind from "./pages/Rosalind.js";
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
+import ProjectDetail from "./pages/ProjectDetail.js"; // Import the detail page
+
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "'Courier New', Courier, monospace",
+  },
+});
 
 
 function App() {
@@ -34,6 +45,7 @@ function App() {
 
 
           <Route path = "/projects" element = { <Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} /> {/* Add this */}
           <Route path = "/research" element = { <Research />} />
           <Route path = "/rosalind" element = { <Rosalind />} />
           <Route path = "/about"    element = { <About    />} />

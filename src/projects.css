@@ -1,14 +1,171 @@
-*{
-    font-family: 'Courier New', Courier, monospace; 
-  }
-  
-  
-  
-  :root {
-    --background-light-green: #8AC16A;
-    --dark-green: #249C54;
-  }
+/* Global Font */
+* {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+/* Material-UI Typography and Components */
+.MuiTypography-root,
+.MuiInputLabel-root,
+.MuiOutlinedInput-root,
+.MuiAutocomplete-root,
+.MuiSelect-root {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+.filter-box .MuiInputLabel-root {
+  transform: translate(14px, 16px) scale(1) !important; /* Adjust initial position of the label */
+  font-family: 'Courier New', Courier, monospace !important;
+  color: black;
+  transition: all 0.3s ease; /* Smooth transition for label movement */
+}
+
+.filter-box .MuiInputLabel-shrink {
+  transform: translate(14px, -20px) scale(1) !important; /* Adjust position when label shrinks */
+}
 
 
-  
-  
+.MuiOutlinedInput-root {
+  height: 50px; /* Set consistent height for all inputs */
+  font-family: 'Courier New', Courier, monospace !important;
+  background-color: white;
+  color: rgb(13, 139, 66); /* Dark green text */
+  border-radius: 8px;
+}
+
+.filter-box .MuiAutocomplete-input,
+.filter-box .MuiSelect-root {
+  line-height: 1.5; /* Adjust for consistent padding inside */
+}
+
+
+.MuiSelect-icon {
+  color: rgb(13, 139, 66); /* Dark green icon color for dropdown */
+}
+
+/* Responsive Adjustments for Material-UI Components */
+@media only screen and (max-width: 600px) {
+  .MuiFormControl-root {
+    width: 100%; /* Full-width on smaller screens */
+  }
+}
+
+/* Project Card Styling */
+.project-card {
+  width: 250px;
+  background-color: rgb(94, 155, 114); /* Dark green background */
+  border: 2px solid rgb(13, 139, 66); /* Border color */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Section (Top Half of Card) */
+.project-card-image {
+  background-color: rgb(18, 148, 98); /* Background for image area */
+  padding: 3px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid rgb(78, 125, 212); /* Border around the image */
+  border-radius: 5px;
+}
+
+/* Content Section (Bottom Half of Card) */
+.project-card-content {
+  padding: 5px;
+  text-align: center;
+}
+
+.project-title {
+  color: white;
+  padding: 5px 5px;
+}
+
+.project-description {
+  color: white;
+  font-size: 0.9rem;
+    font-weight: bold;
+
+  margin-bottom: 16px;
+}
+
+/* Tags Section */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.project-tag {
+  background-color: white !important; /* tag background */
+  color: rgb(0, 85, 81) !important; /* tag text */
+  font-size: 0.8rem !important;
+  font-weight: bold;
+  border-radius: 10px !important; /* Optional: Rounded corners */
+  padding: 4px 6px !important; /* Optional: Add padding */
+}
+
+
+/* Container for Project Cards */
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Space between cards */
+  padding: 1rem;
+}
+
+/* Filter and Sort Styling */
+.filter-box {
+  width: 300px; /* Set consistent width for all filter and sort dropdowns */
+  height: 50px; /* Set consistent height */
+}
+
+.filter-sort-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Align vertically */
+  gap: 1rem; /* Add consistent space between dropdowns */
+  margin-bottom: 2rem;
+}
+
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 1024px) {
+  .project-card {
+    width: 200px; /* Adjust card size for tablets */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project-cards-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-card {
+    width: 100%; /* Full-width cards for phones */
+  }
+
+  .filter-sort-container {
+    flex-direction: column; /* Stack filters and sort options vertically */
+  }
+
+  .filter-box {
+    width: 100%; /* Full width for smaller screens */
+  }
+}

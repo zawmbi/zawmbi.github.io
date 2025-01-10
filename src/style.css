@@ -32,7 +32,7 @@ header {
 
 body {
   position: relative; 
-  background-image: url('./attachments/dnaBorder.png'), url('./attachments/dnaBorder.png');
+  background-image: url('../public/attachments/dnaBorder.png'), url('../public/attachments/dnaBorder.png');
   background-repeat: repeat-y, repeat-y;
   background-position: 20px top, right 20px top;
   background-color: var(--background-light-green);

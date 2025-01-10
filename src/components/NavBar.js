@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";  // library that contains icons (i.e for loading, coding languages, etc)
 import "../style.css"
-import LeafLogo from "../attachments/leaf.png"; // imports my leaf logo 
 import { Link } from 'react-router-dom';
 
 
@@ -17,9 +16,9 @@ function NavBar() {
     return (
         <header className="nav"> 
             <div className="logo">
-                <Link to="/">
-                    <img src={LeafLogo} alt="Logo" />
-                </Link>
+            <Link to="/">
+                <img src="/attachments/leaf.png" alt="Logo" />
+            </Link>
             </div>
 
             <nav ref = {navRef}>
