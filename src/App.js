@@ -26,7 +26,7 @@ function App() {
   
   return (
     <React.Fragment>
-      <BrowserRouter basename="/zawmbi.github.io">
+      <BrowserRouter basename="/">
 
         <NavBar />
         <Routes>
