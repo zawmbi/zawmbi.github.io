@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/zawmbi.github.io/static/css/main.68141adb.css",
-    "main.js": "/zawmbi.github.io/static/js/main.5515c27c.js",
-    "static/js/488.845bad5f.chunk.js": "/zawmbi.github.io/static/js/488.845bad5f.chunk.js",
-    "static/media/aboutmetab.PNG": "/zawmbi.github.io/static/media/aboutmetab.2c8f2ccef72a56cfae28.PNG",
-    "static/media/leaf.png": "/zawmbi.github.io/static/media/leaf.508a24ba0335fbb81a25.png",
-    "index.html": "/zawmbi.github.io/index.html",
-    "main.68141adb.css.map": "/zawmbi.github.io/static/css/main.68141adb.css.map",
-    "main.5515c27c.js.map": "/zawmbi.github.io/static/js/main.5515c27c.js.map",
-    "488.845bad5f.chunk.js.map": "/zawmbi.github.io/static/js/488.845bad5f.chunk.js.map"
+    "main.css": "/static/css/main.68141adb.css",
+    "main.js": "/static/js/main.a69ffd0a.js",
+    "static/js/488.845bad5f.chunk.js": "/static/js/488.845bad5f.chunk.js",
+    "static/media/aboutmetab.PNG": "/static/media/aboutmetab.2c8f2ccef72a56cfae28.PNG",
+    "static/media/leaf.png": "/static/media/leaf.508a24ba0335fbb81a25.png",
+    "index.html": "/index.html",
+    "main.68141adb.css.map": "/static/css/main.68141adb.css.map",
+    "main.a69ffd0a.js.map": "/static/js/main.a69ffd0a.js.map",
+    "488.845bad5f.chunk.js.map": "/static/js/488.845bad5f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68141adb.css",
-    "static/js/main.5515c27c.js"
+    "static/js/main.a69ffd0a.js"
   ]
 }
