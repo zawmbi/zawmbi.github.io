@@ -9,9 +9,8 @@ function About(){
                 <h1>About Me</h1>
                 <br/>
                 <div className="image-container">
-                    <img 
-                    src="/attachments/aboutmetab.png" 
-                    alt="Photo of me" 
+                <img
+                    src={`${process.env.PUBLIC_URL}/attachments/aboutmetab.png`} alt = "Linda" /* idk why the photo has to be linked this way, it just does. public folder reasons. */
                     className="profile-photo" 
                 />
                 </div>
