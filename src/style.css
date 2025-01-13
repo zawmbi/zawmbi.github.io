@@ -30,6 +30,8 @@ header {
   overflow: hidden;
 }
 
+
+
 body {
   position: relative; 
   background-image: url('../public/attachments/dnaBorder.png'), url('../public/attachments/dnaBorder.png');

@@ -7,10 +7,10 @@ function About(){
         <div>
             <main className="rosalind-text">
                 <h1>About Me</h1>
+                <hr className="faint-divider" />
                 <br/>
                 <div className="image-container">
-                <img
-                    src={`${process.env.PUBLIC_URL}/attachments/aboutmetab.png`} alt = "Linda" /* idk why the photo has to be linked this way, it just does. public folder reasons. */
+                <img src={process.env.PUBLIC_URL + './attachments/aboutmetab.png'} alt = "Linda" /* idk why the photo has to be linked this way, it just does. public folder reasons. */
                     className="profile-photo" 
                 />
                 </div>
@@ -32,15 +32,15 @@ function About(){
                 </p>
                 <br/>
                 <p className="about-paragraph">
-                    I've always been an active person, but for the past few years, I have committed myself to weightlifting,
+                    For the past few years, I have committed myself to weightlifting,
                     calisthenics, and jump-roping. Outside of the gym, I love exploring the nature 
                     paths that Illinois has to offer, particularly in the 
-                    Palos Forest Preserves. When the weather permits, I enjoy figure skating outdoors!
+                    Palos Forest Preserves, or the various parks in and around Chicago. When the weather permits, I enjoy figure skating!
                 </p> <br/>
                 <p className="about-paragraph">
                     At home, I have three cats and a garden. I grow fruits, veggies, herbs,
                     and flowers when it is warm enough to. Some of my more successful plants are tomatoes, cantaloupes, garlic,
-                    oregano, jasmine, and mint. I enjoy cooking and baking middle eastern dishes and desserts with my mom. I also love sudoku, reading,
+                    oregano, mint, and jasmine. I enjoy cooking and baking middle eastern dishes and desserts with my mom. I also love sudoku, reading,
                     and browsing Fragrantica in idle times.
                 </p>
             </main>

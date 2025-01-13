@@ -1,15 +1,55 @@
-*{
-    font-family: 'Courier New', Courier, monospace; 
+/* Global Font */
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Define color variables */
+:root {
+  --background-light-green: #8AC16A;
+  --dark-green: #249C54;
+}
+
+/* Profile photo styling */
+.profile-photo {
+  height: 200px; /* Set the height of the image */
+  margin: 20px auto; /* Center the image and add spacing */
+  display: block; /* Center-align image in the container */
+}
+
+/* About paragraph styling */
+.about-paragraph {
+  padding: 0px 200px; /* Consistent padding for paragraphs */
+  font-size: 20px; /* Font size */
+  margin: 0px 0px; /* No additional vertical margins */
+  line-height: 1.6; /* Improve readability with line height */
+}
+
+/* Divider styling */
+.faint-divider {
+  width: 80%; /* Consistent width for the divider */
+  height: 1px; /* Thickness of the divider */
+  margin: 20px auto; /* Center-align and add vertical spacing */
+  background-color: lightgray; /* Divider color */
+  border: none; /* Remove any default borders */
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 1024px) {
+  .about-paragraph {
+    padding: 0px 50px; /* Reduce padding for tablets */
   }
-  
-  
-  
-  :root {
-    --background-light-green: #8AC16A;
-    --dark-green: #249C54;
-  }
-  
 
   .profile-photo {
-    height: 200px; /* Set the width of the image */
+    height: 150px; /* Adjust the image size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-paragraph {
+    padding: 0px 20px; /* Reduce padding for phones */
+  }
+
+  .profile-photo {
+    height: 120px; /* Adjust the image size for phones */
+  }
 }
