@@ -5,18 +5,17 @@ function About(){
 
     return (
         <div>
-            <main className="rosalind-text">
+            <main className="about-text">
                 <h1>About Me</h1>
                 <hr className="faint-divider" />
+
                 <br/>
                 <div className="image-container">
-                <img src={process.env.PUBLIC_URL + './attachments/aboutmetab.png'} alt = "Linda" /* idk why the photo has to be linked this way, it just does. public folder reasons. */
-                    className="profile-photo" 
-                />
+                <img
+                    src={`${process.env.PUBLIC_URL}/attachments/aboutmetab.PNG`} alt="Linda" className="profile-photo"/>
                 </div>
                 <p className="about-paragraph">
                 <br/>
-                
                     Hi, my name is Linda!
                 </p>
                 <br/>

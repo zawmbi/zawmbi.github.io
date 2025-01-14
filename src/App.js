@@ -1,6 +1,4 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 
 import './App.css'
 import React from 'react'
@@ -13,13 +11,6 @@ import Rosalind from "./pages/Rosalind.js";
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
 import ProjectDetail from "./pages/ProjectDetail.js"; // Import the detail page
-
-
-const theme = createTheme({
-  typography: {
-    fontFamily: "'Courier New', Courier, monospace",
-  },
-});
 
 
 function App() {
