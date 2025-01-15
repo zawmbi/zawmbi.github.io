@@ -1,0 +1,44 @@
+/* color variables */
+:root {
+    --background-light-green: #8AC16A;
+    --dark-green: #249C54;
+  }
+  
+  /* contact container */
+  .contact-container {
+    padding-top: 50px; /* ensures consistent spacing from the navbar */
+    text-align: center;
+  }
+  
+  /* divider */
+  .contact-container .faint-divider {
+    width: 80%;
+    height: 1px;
+    margin: 20px auto;
+    background-color: lightgray;
+    border: none;
+  }
+  
+  /* contact text */
+  .contact-container p {
+    padding: 0px 100px;
+    font-size: 20px;
+    margin: 0px;
+    line-height: 1.6;
+  }
+  
+  /* small screens */
+  @media only screen and (max-width: 1024px) {
+    .contact-container p {
+      padding: 0px 50px;
+    }
+  }
+  
+  /* responsive design for phones */
+  @media only screen and (max-width: 600px) {
+    .contact-container p {
+      padding: 0px 20px;
+    }
+  }
+
+  

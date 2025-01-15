@@ -114,8 +114,8 @@
   color: rgb(0, 85, 81) !important; /* tag text */
   font-size: 0.8rem !important;
   font-weight: bold;
-  border-radius: 10px !important; /* Optional: Rounded corners */
-  padding: 4px 6px !important; /* Optional: Add padding */
+  border-radius: 10px !important; /*  rounded corners */
+  padding: 4px 6px !important;
 }
 
 
@@ -169,3 +169,4 @@
     width: 100%; /* Full width for smaller screens */
   }
 }
+

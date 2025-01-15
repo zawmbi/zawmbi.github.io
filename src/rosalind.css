@@ -15,9 +15,10 @@
 
 /* large screens */
 .rosalind-text p {
-  padding: 0px 200px; /* No internal padding */
+  padding: 0px x; /* No internal padding */
   font-size: 20px; /* Font size */
   margin: 0px 0px; /*  margin from the edges */
+  line-height: 1.6;
 }
 
 
@@ -45,4 +46,24 @@ progress::-webkit-progress-bar {
   border-radius: 100px;
 }
 
+/* Rosalind paragraph styling */
+.rosalind-paragraph {
+  padding: 0px 100px;
+  font-size: 20px;
+  margin: 0px;
+  line-height: 1.6;
+}
+
+/* small screens */
+@media only screen and (max-width: 1024px) {
+  .rosalind-paragraph {
+    padding: 0px 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .rosalind-paragraph {
+    padding: 0px 20px;
+  }
+}
 

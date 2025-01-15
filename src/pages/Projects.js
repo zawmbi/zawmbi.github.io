@@ -5,10 +5,14 @@ import "../projects.css";
 function Projects() {
   return (
     <div>
-       <br /> <br /> <br />
+      <main>
       <h1>Programming Projects</h1>
-      <br /> <br /><br /> <br />
+      <hr className="faint-divider" />
+      <br/>
+      <p className = "update-message">This page is still being updated,but here are some of the programming projects I have completed in the last year or two. </p> <br /> <br />
       <ProjectList />
+    
+      </main>
     </div>
   );
 }

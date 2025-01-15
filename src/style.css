@@ -1,10 +1,9 @@
-
-*{
-  font-family: 'Courier New', Courier, monospace; 
+/* global font */
+* {
+  font-family: 'Courier New', Courier, monospace;
 }
 
-
-
+/* define color variables */
 :root {
   --background-light-green: #8AC16A;
   --dark-green: #249C54;
@@ -12,37 +11,99 @@
 
 
 main h1 {
-  margin-top: 5rem; /* adjusts spacing above the h1 */
-  margin-bottom: 0rem; 
-  text-align: center; 
+  margin-top: 50px;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
-
-/* deals with the navbar heading */
+/* navbar styling */
 header {
   display: flex;
-  align-items: center;        /* center items vertically */
-  justify-content: space-between; /* separate logo on left, links on right */
-  height: auto;              /* chooses navbar height based on screen size */
-  padding: 0rem 1.5rem;           /* left/right padding only */
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 0rem 1.5rem;/* global font */
+  * {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* define color variables */
+  :root {
+    --background-light-green: #8AC16A;
+    --dark-green: #249C54;
+  }
+  
+  /* consistent <hr> styling */
+  hr {
+    width: 80%;
+    height: 1px;
+    margin: 20px auto;
+    background-color: lightgray;
+    border: none;
+  }
+  
+  /* consistent horizontal padding and typography */
+  .content-container {
+    padding: 0px 100px;
+    font-size: 20px;
+    margin: 0px;
+    line-height: 1.6;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .content-container {
+      padding: 0px 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .content-container {
+      padding: 0px 20px;
+    }
+  }
+  
+  /* profile photo */
+  .profile-photo {
+    height: 200px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  /* progress bar styling */
+  progress {
+    width: 50%;
+    height: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--dark-green);
+    border-radius: 3px;
+    background-color: #e0e0e0;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #095f2a;
+  }
+  
+  progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 100px;
+  }
+  
   background-color: var(--dark-green);
   color: white;
   overflow: hidden;
 }
 
-
-
 body {
-  position: relative; 
+  position: relative;
   background-image: url('../public/attachments/dnaBorder.png'), url('../public/attachments/dnaBorder.png');
   background-repeat: repeat-y, repeat-y;
   background-position: 20px top, right 20px top;
   background-color: var(--background-light-green);
-  background-size: 50px, 50px; 
-  font-family: 'Courier New', Courier, monospace; 
+  background-size: 50px, 50px;
   color: white;
-  border: 10px solid var(--dark-green);  /* border outside of the whole site */
-  padding: 0px;              /* padding from the top of the browser */
+  border: 10px solid var(--dark-green);
+  padding: 0px;
   margin: 0;
   text-align: center;
   min-height: 100vh;
@@ -50,26 +111,21 @@ body {
 
 nav a {
   display: inline-block;
-  margin: 0px 20px;  /* space between links */
+  margin: 0px 20px;
   font-size: 1.3rem;
-  padding: 0px 10px;  /* controls the link’s highlight box size */
-  border-radius: 6px; /* rounds the corners */
-  text-decoration: none; /* removes the underline for each link */
+  padding: 0px 10px;
+  border-radius: 6px;
+  text-decoration: none;
   color: white;
   transition: background-color 0.5s ease;
-
 }
 
 nav a:hover {
-  /* background-color: var(--background-light-green); */
-  color: white; 
-  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); popping out shadow effect */
-  transform: scale(1.05); /* enlarges the link */
-  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease; /* smooth transitions */
+  color: white;
+  transform: scale(1.05);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
   font-weight: bold;
-
 }
-
 
 header .nav-btn {
   padding: 0px;
@@ -78,47 +134,42 @@ header .nav-btn {
   border: none;
   outline: none;
   color: white;
-  visibility: hidden; /* navbar buttons will invisible while loading */
-  opacity: 0; /* navbar buttons will invisible while loading */
+  visibility: hidden;
+  opacity: 0;
   font-size: 1.8rem;
 }
 
-
-/* css for the leaf logo */
+/* leaf logo */
 .logo {
-  display: inline-block; /* makes the logo a block element for padding and hover effects */
-  position: relative; /* required for hover effect */
+  display: inline-block;
+  position: relative;
   cursor: auto;
-  text-decoration: none; /* removes underline */
+  text-decoration: none;
 }
 
 .logo img {
-  height: 50px; /* adjust the size of the logo */
+  height: 50px;
   width: 50px;
   margin-left: -15px;
-  transition: transform 0.5s ease, background-color 0.5s ease; 
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .logo:hover {
-
-  transform: scale(1.1); /* enlarges the entire logo and background slightly */
-  transition: background-color 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+  transform: scale(1.1);
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
-
-
-@media only screen and (max-width: 1024px) /* this corresponds to small screens! */ 
-{
+/* small screens */
+@media only screen and (max-width: 1024px) {
   header .nav-btn {
     visibility: visible;
-    opacity: 1; /* hamburger button visibility */
-
+    opacity: 1;
   }
 
   header nav {
     position: fixed;
-    top: 0; /* makes the tiny screen show the hamburger's menu correctly; don't delete */
-    left: 0; 
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     display: flex;
@@ -126,28 +177,63 @@ header .nav-btn {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    background-color:var(--dark-green);
+    background-color: var(--dark-green);
     transition: 1s;
-    transform: translateY(-100vh); 
-
+    transform: translateY(-100vh);
   }
 
   header .responsive_nav {
     transform: none;
-
   }
 
   nav .nav-close-btn {
     position: absolute;
     top: 2rem;
     right: 2rem;
-
   }
 
-  nav a{
+  nav a {
     font-size: 1.5rem;
-
   }
-
 }
 
+
+
+/* consistent division line styling */
+hr {
+  width: 80%;          
+  height: 1px;         
+  margin: 20px auto;   /* centers the line and adds vertical spacing */
+  background-color: lightgray; 
+  border: none;        /* removes default border */
+}
+
+
+.content-container {
+  padding: 0px 100px; /* consistent horizontal padding */
+  font-size: 20px;    /* consistent font size */
+  margin: 0px;        /* no additional margin */
+  line-height: 1.6;   /* consistent line height */
+}
+
+@media only screen and (max-width: 1024px) {
+  .content-container {
+    padding: 0px 50px; /* smaller padding for medium screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    padding: 0px 20px; /* even smaller padding for small screens */
+  }
+}
+
+
+
+
+/* construction msgs */
+.update-message {
+  padding: 0px 100px;
+  font-size: 20px;
+  line-height: 1.6;
+}

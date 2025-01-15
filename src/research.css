@@ -1,11 +1,19 @@
-*{
-    font-family: 'Courier New', Courier, monospace; 
-  }
-  
-  
-  
-  :root {
-    --background-light-green: #8AC16A;
-    --dark-green: #249C54;
-  }
-  
+/* color variables */
+:root {
+  --background-light-green: #8AC16A;
+  --dark-green: #249C54;
+}
+
+/* research container */
+.research-container {
+  padding: 0; /* removes any padding */
+  margin: 0; /* ensures no margin */
+  text-align: center;
+}
+
+/* research text */
+.research-container h1 {
+  margin: 20px auto;
+  font-size: 24px;
+  color: white;
+}

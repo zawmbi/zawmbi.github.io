@@ -4,12 +4,16 @@ import "../research.css";
 function Research() {
 
     return (
-<div>
-    <h1> Thank you for your patience while this page is under construction! </h1>
-
-</div>
-    );
-
-}
+        <div>
+          <main>
+          <h1>Research</h1>
+          <hr className="faint-divider" />
+          <br/>
+          <p className = "update-message">Thank you for your patience while this page is under construction. </p> <br /> <br />
+        
+          </main>
+        </div>
+      );
+    }
 
 export default Research; 

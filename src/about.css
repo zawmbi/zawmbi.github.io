@@ -1,52 +1,47 @@
-/* define color variables */
+/* color variables */
 :root {
   --background-light-green: #8AC16A;
   --dark-green: #249C54;
 }
 
+/* about container */
+.about-text {
+  padding: 0; /* ensures no padding on top */
+  margin: 0; /* removes any margin on top */
+}
 
-/* profile photo styling */
-.profile-photo {
+/* profile photo */
+.about-text .profile-photo {
   height: 200px;
   margin: 20px auto;
   display: block;
 }
 
-/* about paragraph styling */
-.about-paragraph {
+/* about paragraph */
+.about-text .about-paragraph {
   padding: 0px 100px;
   font-size: 20px;
   margin: 0px;
-  line-height: 1.6; /* line spacing basically */ 
+  line-height: 1.6;
 }
 
-/* divider styling */
-.faint-divider {
-  width: 80%;
-  height: 1px;
-  margin: 20px auto;
-  background-color: lightgray;
-  border: none;
-}
 
 /* small screens */
 @media only screen and (max-width: 1024px) {
-  .about-paragraph {
+  .about-text .about-paragraph {
     padding: 0px 50px;
   }
-
-  .profile-photo {
+  .about-text .profile-photo {
     height: 150px;
   }
 }
 
 /* responsive design for phones */
 @media only screen and (max-width: 600px) {
-  .about-paragraph {
+  .about-text .about-paragraph {
     padding: 0px 20px;
   }
-
-  .profile-photo {
+  .about-text .profile-photo {
     height: 120px;
   }
 }
