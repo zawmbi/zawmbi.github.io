@@ -1,0 +1,217 @@
+.loading-text {
+    position: absolute; /* allows precise positioning */
+    top: 30%; /* initial vertical position */
+    left: 50%; /* center horizontally */
+    transform: translate(-50%, -50%); /* center alignment */
+    font-size: 1.5rem; /* size of the text */
+    font-weight: bold; /* bold text */
+    color: #00a2ff; /* match the primary animation color */
+    text-align: center; /* center-align the text */
+}
+
+.container {
+    position: absolute; /* allows precise positioning */
+    top: 50%; /* initial vertical position of DNA animation */
+    left: 50%; /* center horizontally */
+    transform: translate(-50%, -50%); /* center alignment */
+}
+
+@media (max-width: 600px) {
+    .loading-text {
+        top: 20%; /* move text higher on small screens */
+        font-size: 1.2rem; /* reduce font size */
+    }
+
+    .container {
+        top: 60%; /* move animation lower on small screens */
+    }
+}
+
+
+.circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #00a2ff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rowc {
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.c1 {
+    animation: c1 1.5s infinite;
+}
+
+.c2 {
+    animation: c2 1.5s infinite;
+    background-color: #00299b;
+}
+
+@keyframes c1 {
+    0% {
+        transform: translateY(0px) scale(1);
+        animation-timing-function: ease-in; /* easing at the start */
+    }
+    25% {
+        transform: translateY(12px) scale(1.5);
+        background-color: #00299b;
+        z-index: 10;
+        animation-timing-function: linear; /* no easing in the middle */
+    }
+    50% {
+        transform: translateY(34px) scale(1);
+        animation-timing-function: linear; /* keep motion linear here */
+    }
+    75% {
+        transform: translateY(12px) scale(0.6);
+        background-color: #34f8ff;
+        z-index: 1;
+        opacity: 0.1;
+        animation-timing-function: linear; /* keep motion linear here */
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+        animation-timing-function: ease-out; /* easing at the end */
+    }
+}
+
+@keyframes c2 {
+    0% {
+        transform: translateY(0px) scale(1);
+        animation-timing-function: ease-in;
+    }
+    25% {
+        transform: translateY(-12px) scale(0.6);
+        background-color: #2cffdc;
+        z-index: 1;
+        opacity: 0.1;
+        animation-timing-function: linear;
+    }
+    50% {
+        transform: translateY(-34px) scale(1);
+        animation-timing-function: linear;
+    }
+    75% {
+        transform: translateY(-12px) scale(1.5);
+        background-color: #00a2ff;
+        z-index: 10;
+        animation-timing-function: linear;
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
+.row2 .c1 {
+    animation-delay: .1s;
+}
+
+.row2 .c2 {
+    animation-delay: .1s;
+}
+
+.row3 .c1 {
+    animation-delay: .22s;
+}
+
+.row3 .c2 {
+    animation-delay: .22s;
+}
+
+.row4 .c1 {
+    animation-delay: .37s;
+}
+
+.row4 .c2 {
+    animation-delay: .37s;
+}
+
+.row5 .c1 {
+    animation-delay: .49s;
+}
+
+.row5 .c2 {
+    animation-delay: .49s;
+}
+
+.row6 .c1 {
+    animation-delay: .67s;
+}
+
+.row6 .c2 {
+    animation-delay: .67s;
+}
+
+.row7 .c1 {
+    animation-delay: .89s;
+}
+
+.row7 .c2 {
+    animation-delay: .89s;
+}
+
+.row8 .c1 {
+    animation-delay: .95s;
+}
+
+.row8 .c2 {
+    animation-delay: .95s;
+}
+
+.row9 .c1 {
+    animation-delay: 1.2s;
+}
+
+.row9 .c2 {
+    animation-delay: 1.2s;
+}
+
+.row10 .c1 {
+    animation-delay: 1.45s;
+}
+
+.row10 .c2 {
+    animation-delay: 1.45s;
+}
+
+.row11 .c1 {
+    animation-delay: 1.62s;
+}
+
+.row11 .c2 {
+    animation-delay: 1.62s;
+}
+
+.row12 .c1 {
+    animation-delay: 1.88s;
+}
+
+.row12 .c2 {
+    animation-delay: 1.88s;
+}
+
+.row13 .c1 {
+    animation-delay: 2s;
+}
+
+.row13 .c2 {
+    animation-delay: 2s;
+}
+
+body.loading {
+    background-image: none !important;
+    background-color: #135a48 !important;
+    border: none !important;
+}

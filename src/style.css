@@ -7,6 +7,7 @@
 :root {
   --background-light-green: #8AC16A;
   --dark-green: #249C54;
+  --beautiful-green: #135a48;
 }
 
 
@@ -33,7 +34,7 @@ header {
     --dark-green: #249C54;
   }
   
-  /* consistent <hr> styling */
+  /* division line styling */
   hr {
     width: 80%;
     height: 1px;
@@ -127,7 +128,7 @@ nav a:hover {
   font-weight: bold;
 }
 
-header .nav-btn {
+header .nav-btn { /* dont delete this PLZ it makes the buttons go away when u dont need them*/
   padding: 0px;
   cursor: auto;
   background: transparent;

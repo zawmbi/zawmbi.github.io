@@ -2,6 +2,8 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";  // library that contains icons (i.e for loading, coding languages, etc)
 import "../style.css"
+import "../navbar.css"
+
 import { Link } from 'react-router-dom';
 
 
