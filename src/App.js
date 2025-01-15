@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from './components/NavBar.js';
 import Cards from "./components/Cards";
 import Loading from "./components/Loading";
+import { projectsWithTags as projects } from "./components/ProjectsData";
 
 import Research from "./pages/Research.js";
 import Projects from "./pages/Projects.js";
@@ -12,6 +13,7 @@ import Rosalind from "./pages/Rosalind.js";
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
 import ProjectDetail from "./pages/ProjectDetail.js";
+import WildfireAnalysis from "./pages/programmingprojects/wildfire-analysis.js";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,16 +46,19 @@ function App() {
                   <h1>₊˚⊹♡ welcome to my portfolio ♡⊹˚₊ </h1>
                 </section>
                 <section className="portfolio-cards">
-                  <Cards />
+                  <Cards projects={projects} />
                 </section>
               </main>
             } />
+            
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/research" element={<Research />} />
             <Route path="/rosalind" element={<Rosalind />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/programmingprojects/wildfire-analysis.js" element={<WildfireAnalysis />} />
+
           </Routes>
         </BrowserRouter>
       )}
@@ -62,3 +67,8 @@ function App() {
 }
 
 export default App;
+
+<Routes>
+  {/* Other routes */}
+  <Route path="/programmingprojects/wildfire-analysis" element={<WildfireAnalysis />} />
+</Routes>;
