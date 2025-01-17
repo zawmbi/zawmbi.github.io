@@ -39,28 +39,35 @@ function App() {
       ) : (
         <BrowserRouter basename="/">
           <NavBar />
-          <Routes>
-            <Route path="/" element={
-              <main>
-                <section className="intro">
-                  <h1>₊˚⊹♡ welcome to my portfolio ♡⊹˚₊ </h1>
-                </section>
-                <section className="portfolio-cards">
-                  <Cards projects={projects} />
-                </section>
-              </main>
-            } />
-            
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/rosalind" element={<Rosalind />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/programmingprojects/wildfire-analysis.js" element={<WildfireAnalysis />} />
-
-          </Routes>
+          <div className="content-container">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <main>
+                    <section className="intro">
+                      <h1>₊˚⊹♡ welcome to my portfolio ♡⊹˚₊ </h1>
+                    </section>
+                    <section className="portfolio-cards">
+                      <Cards projects={projects} />
+                    </section>
+                  </main>
+                }
+              />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:id" element={<ProjectDetail />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="/rosalind" element={<Rosalind />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route
+                path="/programmingprojects/wildfire-analysis.js"
+                element={<WildfireAnalysis />}
+              />
+            </Routes>
+          </div>
         </BrowserRouter>
+
       )}
     </React.Fragment>
   );
@@ -69,6 +76,6 @@ function App() {
 export default App;
 
 <Routes>
-  {/* Other routes */}
+  {/* routes for the projects page(s) */}
   <Route path="/programmingprojects/wildfire-analysis" element={<WildfireAnalysis />} />
 </Routes>;

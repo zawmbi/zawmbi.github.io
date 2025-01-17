@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
           <img src={image} alt={title} />
         </div>
         <div className="project-card-content">
-          <Typography variant="h6" className="project-title">
+          <Typography className="project-title">
             {title}
           </Typography>
           <Typography variant="body2" className="project-description">

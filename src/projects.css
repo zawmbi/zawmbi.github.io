@@ -3,6 +3,12 @@
   font-family: 'Courier New', Courier, monospace !important;
 }
 
+:root {
+  --background-light-green: #8AC16A;
+  --dark-green: #249C54;
+  --beautiful-green: #135a48;
+  }
+  
 /* Material-UI Typography and Components */
 .MuiTypography-root,
 .MuiInputLabel-root,
@@ -52,7 +58,11 @@
 /* Project Card Styling */
 .project-card {
   width: 250px;
-  background-color: rgb(94, 155, 114); /* Dark green background */
+  height: auto;
+  max-width: 250px;
+  max-height: 400px;
+  padding: 0px 0px;
+  background-color: rgb(85, 174, 115); /* Dark green background */
   border: 2px solid rgb(13, 139, 66); /* Border color */
   border-radius: 10px;
   overflow: hidden;
@@ -67,7 +77,7 @@
 
 /* Image Section (Top Half of Card) */
 .project-card-image {
-  background-color: rgb(18, 148, 98); /* Background for image area */
+  background-color: var(--dark-green); /* Background for image area */
   padding: 3px;
   height: 140px;
   display: flex;
@@ -88,6 +98,11 @@
   text-align: center;
 }
 
+.project-card-content .project-title {
+  font-size: 1rem !important; /* Adjust the font size */
+}
+
+
 .project-card-link
 {
   text-decoration:none;
@@ -97,14 +112,14 @@
 .project-title {
   color: white;
   padding: 5px 5px;
+  font-size: 100px;
 }
 
 .project-description {
   color: white;
-  font-size: 0.9rem;
-    font-weight: bold;
-
-  margin-bottom: 16px;
+  font-size: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* Tags Section */
@@ -121,23 +136,23 @@
   font-size: 0.8rem !important;
   font-weight: bold;
   border-radius: 10px !important; /*  rounded corners */
-  padding: 4px 6px !important;
+  padding: 0px 0px !important;
 }
 
 
-/* Container for Project Cards */
+
 .project-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem; /* Space between cards */
-  padding: 1rem;
+  gap: 2rem; /* Maintains consistent spacing between cards */
 }
 
 /* Filter and Sort Styling */
 .filter-box {
   width: 300px; /* Set consistent width for all filter and sort dropdowns */
   height: 50px; /* Set consistent height */
+
 }
 
 .filter-sort-container {
@@ -161,18 +176,23 @@
   .project-cards-container {
     flex-direction: column;
     gap: 1rem;
+    align-items: center; /* Align vertically */
+
   }
 
   .project-card {
     width: 100%; /* Full-width cards for phones */
+    
   }
 
   .filter-sort-container {
     flex-direction: column; /* Stack filters and sort options vertically */
+    align-items: center; /* Align vertically */
+
   }
 
   .filter-box {
-    width: 100%; /* Full width for smaller screens */
+    width: 70%; /* Full width for smaller screens */
   }
 }
 
