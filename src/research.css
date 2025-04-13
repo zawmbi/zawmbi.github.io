@@ -1,26 +1,67 @@
-/* color variables */
-:root {
-  --background-light-green: #8AC16A;
-  --dark-green: #249C54;
+.research-card {
+  background-color: white;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Botany poster container */
-.botany-container {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  margin: 20px 0;
+.research-card-image {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Botany poster image */
-.botany-poster {
-  max-width: 50rem; /* size of poster */
-  height: auto;
-  border-radius: 8px; /* rounded corners */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /*subtle shadow */
+.research-card-text {
+  color: white;
+  font-size: 1.05rem;  /* was 0.95rem — increases text size */
+  font-weight: bold;
+  line-height: 1.45;   /* was 1.6 — reduces spacing between lines */
+  padding: 0.5rem;
 }
 
-body.research {
-  background-image: none !important;
-  border: none !important;
+
+.research-card {
+  background-color: rgb(85, 174, 115); /* similar to .project-card */
+  border: 2px solid var(--dark-green);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.research-card-text a {
+  color: white;
+  text-decoration: underline;
+}
+
+.scroll-cue {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: white;
+  font-style: italic;
+}
+
+
+.image-caption {
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.image-caption a {
+  color: white;
+  text-decoration: underline;
 }
