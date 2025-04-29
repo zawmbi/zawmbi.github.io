@@ -6,8 +6,41 @@ function Research() {
   return (
     <div>
       <main>
+        
   <h1>Research</h1>
   <hr className="faint-divider" />
+{/* MissMap Pipeline */}
+<div className="research-card">
+  <a
+    href="https://github.com/zawmbi/MissMap" 
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={`${process.env.PUBLIC_URL}/attachments/missmap.png`}
+      alt="MissMap Pipeline Development"
+      className="research-card-image"
+    />
+  </a>
+  <div className="image-caption">
+    <a
+      href="https://github.com/zawmbi/MissMap" 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View the GitHub repository here.
+    </a>
+  </div>
+
+  <div className="research-card-text">
+    <p>
+      MissMap is a computational pipeline currently in the extremely early stages of development. Its goal is to map the availability of genetic sequence data across plant lineages, particularly focusing on chloroplast, mitochondrial, nuclear, transcriptome, RAD-Seq, and barcode genes. By leveraging public databases like NCBI GenBank, MissMap aims to automate the retrieval, classification, and visualization of sequencing completeness for target clades. The pipeline is designed to assist researchers in quickly identifying data gaps, resolving contentious phylogenies, and supporting better-informed sampling strategies for evolutionary studies. Future updates intend to include data cleaning, ortholog detection, and clade-level sequence summaries. To be presented at Botany 2025 in Palm Springs, California.
+    </p>
+  </div>
+  <div className="scroll-cue"> April 2025 - Independent research project in progress</div>
+</div>
+
+
   {/* Herbaria Paper */}
   <div className="research-card">
   <a
