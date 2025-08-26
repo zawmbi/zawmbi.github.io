@@ -9,9 +9,35 @@ function Research() {
         
   <h1>Research</h1>
   <hr className="faint-divider" />
+
+  {/* Botany 2025 Poster */}
+
+  <div className="research-card">
+  <a
+    href={`${process.env.PUBLIC_URL}/attachments/BotanyPoster2025.png`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={`${process.env.PUBLIC_URL}/attachments/BotanyPoster2025.png`}
+      alt="Botany 2025 Poster"
+      className="research-card-image"
+    />
+  </a>
+  <div className="image-caption">Click to the image to view the full poster.</div>
+
+  <div className="research-card-text">
+    <p>
+    Botany 2025 Poster! Information coming soon
+    </p>
+    </div>
+  <div className="scroll-cue">July 2025 - Supervised by Dr. Joseph Walker at UIC</div>
+</div>
+
+
 {/* MissMap Pipeline */}
 <div className="research-card">
-  <a
+  <a class="no-icon"
     href="https://github.com/zawmbi/MissMap" 
     target="_blank"
     rel="noopener noreferrer"
@@ -24,6 +50,7 @@ function Research() {
   </a>
   <div className="image-caption">
     <a
+      class="no-icon"
       href="https://github.com/zawmbi/MissMap" 
       target="_blank"
       rel="noopener noreferrer"
@@ -34,7 +61,7 @@ function Research() {
 
   <div className="research-card-text">
     <p>
-      MissMap is a computational pipeline currently in the extremely early stages of development. Its goal is to map the availability of genetic sequence data across plant lineages, particularly focusing on chloroplast, mitochondrial, nuclear, transcriptome, RAD-Seq, and barcode genes. By leveraging public databases like NCBI GenBank, MissMap aims to automate the retrieval, classification, and visualization of sequencing completeness for target clades. The pipeline is designed to assist researchers in quickly identifying data gaps, resolving contentious phylogenies, and supporting better-informed sampling strategies for evolutionary studies. Future updates intend to include data cleaning, ortholog detection, and clade-level sequence summaries. To be presented at Botany 2025 in Palm Springs, California.
+      MissMap is a computational pipeline currently in the extremely early stages of development. Its goal is to map the availability of genetic sequence data across plant lineages, particularly focusing on nucleotide and barcoding sequences. By leveraging public databases like NCBI GenBank, MissMap aims to automate the retrieval, classification, and visualization of sequencing completeness for target clades. The pipeline is designed to assist researchers in quickly identifying data gaps, resolving contentious phylogenies, and supporting better-informed sampling strategies for evolutionary studies. Future updates intend to include data cleaning, ortholog detection, filtering through NCBI metadata, and clade-level sequence summaries. This was presented as a poster presentation at Botany 2025 at Palm Springs, California.
     </p>
   </div>
   <div className="scroll-cue"> April 2025 - Independent research project in progress</div>
@@ -72,15 +99,15 @@ function Research() {
   <div className="scroll-cue">February 2025 - Undergraduate supervised by Dr. Joseph Walker at UIC</div>
 
 </div>
-  {/* Botany Poster */}
+  {/* Botany 2024 Poster */}
   <div className="research-card">
   <a
-    href={`${process.env.PUBLIC_URL}/attachments/botanyPoster.png`}
+    href={`${process.env.PUBLIC_URL}/attachments/botanyPoster2024.png`}
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      src={`${process.env.PUBLIC_URL}/attachments/botanyPoster.png`}
+      src={`${process.env.PUBLIC_URL}/attachments/botanyPoster2024.png`}
       alt="Botany 2024 Poster"
       className="research-card-image"
     />
