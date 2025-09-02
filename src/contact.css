@@ -1,44 +1,47 @@
-/* color variables */
-:root {
-    --background-light-green: #8AC16A;
-    --dark-green: #249C54;
-  }
-  
-  /* contact container */
-  .contact-container {
-    padding-top: 50px; /* ensures consistent spacing from the navbar */
-    text-align: center;
-  }
-  
-  /* divider */
-  .contact-container .faint-divider {
-    width: 80%;
-    height: 1px;
-    margin: 20px auto;
-    background-color: lightgray;
-    border: none;
-  }
-  
-  /* contact text */
-  .contact-container p {
-    padding: 0px 100px;
-    font-size: 20px;
-    margin: 0px;
-    line-height: 1.6;
-  }
-  
-  /* small screens */
-  @media only screen and (max-width: 1024px) {
-    .contact-container p {
-      padding: 0px 50px;
-    }
-  }
-  
-  /* responsive design for phones */
-  @media only screen and (max-width: 600px) {
-    .contact-container p {
-      padding: 0px 20px;
-    }
-  }
+/* ==== overrides: form sizing + mobile stack (place at END of style block) ==== */
 
-  
+/* make sure sizing never overflows the grid */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* tighter max width on desktop */
+.contact-block .form-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  max-width: 420px !important;   /* adjust to taste: 400–480px */
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* inputs stay inside the grid width */
+.contact-block .field input,
+.contact-block .field textarea {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block;
+}
+
+/* button on its own row, centered */
+.contact-block .primary-btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+/* mobile/tablet: stack to 1 column to prevent overlap */
+@media (max-width: 900px) {
+  .contact-block { grid-template-columns: 1fr !important; } /* left/right columns stack */
+  .contact-block .form-grid {
+    grid-template-columns: 1fr !important;   /* name, email, message stack */
+    max-width: 520px !important;             /* roomier single column */
+  }
+  .contact-block .primary-btn { width: 100%; }
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-list .icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}

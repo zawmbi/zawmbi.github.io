@@ -28,7 +28,7 @@ function Research() {
 
   <div className="research-card-text">
     <p>
-    Botany 2025 Poster! Information coming soon
+        This is my Botany 2025 Poster! I had the opportunity to present my MissMap pipeline for the conference which was held at Palm Springs, California. 
     </p>
     </div>
   <div className="scroll-cue">July 2025 - Supervised by Dr. Joseph Walker at UIC</div>
