@@ -7,7 +7,7 @@ import "../projects.css";
 const ProjectList = () => {
   const [selectedSkill, setSelectedSkill] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
-  const [sortOption, setSortOption] = useState("");
+  const [sortOption, setSortOption] = useState("dateCompletedDesc");
 
   // Extract unique skills and coding languages from the projects dynamically
   const allSkills = [...new Set(projects.flatMap((project) => project.skills))];
@@ -64,7 +64,7 @@ const ProjectList = () => {
             onChange={(event) => setSortOption(event.target.value)}
             label="Sort By"
           >
-            <MenuItem value="">Clear Sorting</MenuItem>
+            <MenuItem value="dateCompletedDesc">Clear Sorting</MenuItem>
             <MenuItem value="alphabeticalAsc">Alphabetical (A - Z)</MenuItem>
             <MenuItem value="alphabeticalDesc">Alphabetical (Z - A)</MenuItem>
             <MenuItem value="dateCompletedDesc">Date Completed (New to Old)</MenuItem>
