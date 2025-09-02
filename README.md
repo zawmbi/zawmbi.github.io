@@ -1,4 +1,4 @@
-# zawmbi.github.io
+# lindascomputing.xyz
 
 This repository hosts my personal portfolio website, designed and developed from scratch using React.js and custom CSS. The site serves as a centralized space to share my work in data science, bioinformatics, and computational biology.
 
