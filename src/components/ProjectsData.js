@@ -21,7 +21,7 @@ export const projects = [
     {
       id: 3,
       title: "United States Wildfire Analysis",
-      skills: ["Machine Learning", "Data Visualization"],
+      skills: ["Machine Learning", "Data Visualization", "API Use"],
       languages: ["Python", "R"],
       dateCompleted: "2024-12-03",
       image: "/attachments/WildfireTitle.png",
@@ -162,8 +162,6 @@ export const projects = [
   image: "/attachments/spotify.png",
   link: "/programmingprojects/pictobeat.js"
 },
-
-
 
 
   ];
