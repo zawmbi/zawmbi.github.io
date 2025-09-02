@@ -2,7 +2,7 @@
 
 This repository hosts my personal portfolio website, designed and developed from scratch using React.js and custom CSS. The site serves as a centralized space to share my work in data science, bioinformatics, and computational biology.
 
-## 🧭 Site Overview
+## Overview
 
 The portfolio includes the following pages:
 
@@ -12,7 +12,7 @@ The portfolio includes the following pages:
 - **About** – Background, current work, and professional interests
 - **Contact** – A direct way to reach out
 
-## 📌 Notes
+## Notes
 
 This project was entirely self-built without templates or libraries beyond React. It is not intended for cloning or reuse. The codebase is shared here for transparency and version control purposes only.
 
