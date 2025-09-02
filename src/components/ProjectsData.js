@@ -27,31 +27,31 @@ export const projects = [
       image: "/attachments/WildfireTitle.png",
       link: "/programmingprojects/wildfire-analysis.js"
     },
-    // {
-    //   id: 4,
-    //   title: "Elementary Cell Automation",
-    //   skills: ["Math"],
-    //   languages: ["C"],
-    //   dateCompleted: "2024-09-07",
-    //   image: "/attachments/.png",
-    //   link: "/programmingprojects/elementary-cell.js"
-    // },
-    // {
-    //   id: 5,
-    //   title: "Dynamic Memory Food Web Analysis",
-    //   skills: ["Dynamic Programming"],
-    //   languages: ["C"],
-    //   dateCompleted: "2024-09-21",
-    //   image: "/attachments/.png",
-    //   link: "/programmingprojects/elementary-cell.js"
-    // },
+    {
+      id: 4,
+      title: "Elementary Cell Automation",
+      skills: ["Math"],
+      languages: ["C"],
+      dateCompleted: "2024-09-07",
+      image: "/attachments/cell.png",
+      link: "/programmingprojects/elementary-cell.js"
+    },
+    {
+      id: 5,
+      title: "Dynamic Memory Food Web Analysis",
+      skills: ["Dynamic Programming"],
+      languages: ["C"],
+      dateCompleted: "2024-09-21",
+      image: "/attachments/foodweb.jpg",
+      link: "/programmingprojects/elementary-cell.js"
+    },
     {
       id: 6,
       title: "A Dynamically Evil Word Guessing Game",
       skills: ["Game Development", "Dynamic Programming"],
       languages: ["C"],
       dateCompleted: "2023-10-05",
-      // image: "/attachments/.png",
+      image: "/attachments/evil.jpg",
       link: "/programmingprojects/dynamic-guessing-game.js"
     },
     {
@@ -60,7 +60,7 @@ export const projects = [
       skills: ["Dynamic Programming"],
       languages: ["C"],
       dateCompleted: "2023-10-22",
-      // image: "/attachments/.png",
+      image: "/attachments/vote.jpg",
       link: "/programmingprojects/vote-minimizer.js"
     },
     {
@@ -69,7 +69,7 @@ export const projects = [
       skills: ["Dynamic Programming"],
       languages: ["C"],
       dateCompleted: "2023-11-05",
-      // image: "/attachments/.png",
+      image: "/attachments/ladder.jpg",
       link: "/programmingprojects/shortest-ladder.js"
     },
     {
@@ -78,7 +78,7 @@ export const projects = [
     skills: ["Game Development", "Dynamic Programming"],
     languages: ["C"],
     dateCompleted: "2023-11-19",
-    // image: "/attachments/.png",
+    image: "/attachments/labrynth.png",
     link: "/programmingprojects/escape-labrynth.js"
   },
   {
@@ -87,7 +87,7 @@ export const projects = [
     skills: ["Game Development", "Dynamic Programming"],
     languages: ["C"],
     dateCompleted: "2023-12-01",
-    // image: "/attachments/.png",
+    image: "/attachments/abyss.jpg",
     link: "/programmingprojects/outlast-baddies.js"
   },
   {
@@ -96,7 +96,7 @@ export const projects = [
     skills: ["Data Management"],
     languages: ["C++"],
     dateCompleted: "2023-09-05",
-    // image: "/attachments/.png",
+    image: "/attachments/books.jpg",
     link: "/programmingprojects/library-management.js"
   },
   {
@@ -105,7 +105,7 @@ export const projects = [
     skills: ["Data Management"],
     languages: ["C++"],
     dateCompleted: "2023-09-21",
-    // image: "/attachments/.png",
+    image: "/attachments/search.jpg",
     link: "/programmingprojects/search-engine.js"
   },
   {
@@ -114,7 +114,7 @@ export const projects = [
     skills: ["Data Management", "Test Frameworks", "Dynamic Programming"],
     languages: ["C++"],
     dateCompleted: "2023-10-17",
-    // image: "/attachments/.png",
+    image: "/attachments/shapes.jpg",
     link: "/programmingprojects/shape-list.js"
   },
   {
@@ -123,7 +123,7 @@ export const projects = [
     skills: ["Data Management", "Test Frameworks", "Dynamic Programming"],
     languages: ["C++"],
     dateCompleted: "2023-11-07",
-    // image: "/attachments/.png",
+    image: "/attachments/hospitalqueue.jpg",
     link: "/programmingprojects/priority-queue.js"
   },
   {
@@ -132,7 +132,7 @@ export const projects = [
     skills: ["Data Management", "Test Frameworks", "Dynamic Programming"],
     languages: ["C++"],
     dateCompleted: "2023-11-28",
-    // image: "/attachments/.png",
+    image: "/attachments/graph.png",
     link: "/programmingprojects/graphs.js"
   },
   {
@@ -141,9 +141,28 @@ export const projects = [
     skills: ["Data Management"],
     languages: ["MySQL"],
     dateCompleted: "2024-07-26",
-    // image: "/attachments/.png",
+    image: "/attachments/stethescope.jpeg",
     link: "/programmingprojects/graphs.js"
   },
+  {
+  id: 17,
+  title: "MissMap.py",
+  skills: ["Data Management", "Bioinformatics", "API Use"],
+  languages: ["Python"],
+  dateCompleted: "2026-08-30", 
+  image: "/attachments/BotanyPoster2025.png",
+  link: "/programmingprojects/missmap.js"
+},
+  {
+  id: 18,
+  title: "PicToBeat",
+  skills: ["API Use", "Web Development", "Machine Learning"],
+  languages: ["Python"],
+  dateCompleted: "2026-09-30", 
+  image: "/attachments/spotify.png",
+  link: "/programmingprojects/pictobeat.js"
+},
+
 
 
 
