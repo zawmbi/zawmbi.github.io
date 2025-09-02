@@ -21,7 +21,7 @@ function About() {
                 For the past few years, I have committed myself to weightlifting, calisthenics, and jump-roping. Outside of the gym, I love exploring the nature paths that Illinois has to offer, particularly in the Palos Forest Preserves, or the various parks in and around Chicago. When the weather permits, I enjoy figure skating!
                 </p>
                 <p className="about-paragraph">
-                At home, I have three cats and a garden. I grow fruits, veggies, herbs, and flowers when it is warm enough to. Some of my more successful plants are tomatoes, cantaloupes, garlic, oregano, mint, and jasmine. I enjoy cooking and baking middle eastern dishes and desserts with my mom. I also love sudoku, reading, playing Plague Inc., and browsing Fragrantica in idle times.
+                At home, I have three cats and a garden. Some of my more successful plants are tomatoes, cantaloupes, garlic, oregano, mint, and jasmine. I enjoy cooking and baking middle eastern dishes and desserts with my mom. I also love sudoku, reading, playing Plague Inc., and browsing Fragrantica in idle times.
                 </p>
             </main>
         </div>
