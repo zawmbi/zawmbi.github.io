@@ -26,7 +26,10 @@ function Cards() {
         {/* Contact me */}
         <div className="card">
           <Link to="./contact" style={{ textAlign: "center", color: "white" }}>Contact Me</Link>
-        </div>        
+        </div> 
+        <div className="card">
+          <Link to="./youtube" style={{ textAlign: "center", color: "white" }}>YouTube Channel</Link>
+        </div>      
       </div>
 
     </main>

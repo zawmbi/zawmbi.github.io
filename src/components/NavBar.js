@@ -30,6 +30,8 @@ function NavBar() {
                 <Link to="/rosalind" onClick={closeNavbar}>Rosalind Problems</Link>
                 <Link to="/about" onClick={closeNavbar}>About</Link>
                 <Link to="/contact" onClick={closeNavbar}>Contact Me</Link>
+                <Link to="/youtube" onClick={closeNavbar}>YouTube Channel</Link>
+
 
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes />
