@@ -46,7 +46,9 @@ function App() {
                 element={
                   <main>
                     <section className="intro">
-                      <h1>₊˚⊹♡ welcome to my portfolio ♡⊹˚₊ </h1>
+                      <h1>₊˚⊹♡ Welcome to Linda's Portfolio ♡⊹˚₊ </h1>
+                      <br></br>
+                      
                     </section>
                     <section className="portfolio-cards">
                       <Cards projects={projects} />

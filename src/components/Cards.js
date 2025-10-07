@@ -29,7 +29,10 @@ function Cards() {
         </div> 
         <div className="card">
           <Link to="./youtube" style={{ textAlign: "center", color: "white" }}>YouTube Channel</Link>
-        </div>      
+        </div>    
+        <div className="card">
+          <Link to="./cv" style={{ textAlign: "center", color: "white" }}>CV</Link>
+        </div>   
       </div>
 
     </main>
