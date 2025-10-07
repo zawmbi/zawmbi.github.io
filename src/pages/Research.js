@@ -93,7 +93,7 @@ function Research() {
 
   <div className="research-card-text">
     <p>
-      I am fourth author on a study that tested whether RNA suitable for transcriptomic analysis could be recovered from herbarium specimens collected up to 30 years ago. By extracting RNA from preserved tissues and comparing gene expression profiles, the project demonstrated that mRNA remains biologically informative in many samples despite degradation over time. This expands the utility of historical plant collections for evolutionary and functional genomics. The paper was featured on a podcast the day after publication — <a href="https://open.spotify.com/episode/1cqAG0Xv3hmmNJtJOqYNFa?si=Kgs0xI1qQXmb_5PTgUe4mQ" target="_blank" rel="noopener noreferrer">listen here</a>.
+      I am fourth author on a study that tested whether RNA suitable for transcriptomic analysis could be recovered from herbarium specimens. By extracting RNA from preserved tissues and comparing gene expression profiles, the project demonstrated that mRNA remains biologically informative in many samples despite degradation over time. This expands the utility of historical plant collections for evolutionary and functional genomics. The paper was featured on a podcast the day after publication — <a href="https://open.spotify.com/episode/1cqAG0Xv3hmmNJtJOqYNFa?si=Kgs0xI1qQXmb_5PTgUe4mQ" target="_blank" rel="noopener noreferrer">listen here</a>.
     </p>
   </div>
   <div className="scroll-cue">February 2025 - Undergraduate supervised by Dr. Joseph Walker at UIC</div>
