@@ -14,6 +14,9 @@ import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
 import ProjectDetail from "./pages/ProjectDetail.js";
 import WildfireAnalysis from "./pages/programmingprojects/wildfire-analysis.js";
+import CV from "./pages/CV.js";
+import YouTube from "./pages/Youtube.js";
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +50,7 @@ function App() {
                   <main>
                     <section className="intro">
                       <h1>₊˚⊹♡ Welcome to Linda's Portfolio ♡⊹˚₊ </h1>
+                      <h3> This website is always being updated, but contact me for the most recent info if you can't find it here! </h3>
                       <br></br>
                       
                     </section>
@@ -62,6 +66,8 @@ function App() {
               <Route path="/rosalind" element={<Rosalind />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/youtube" element={<YouTube />} />
+              <Route path="/cv" element={<CV />} />
               <Route
                 path="/programmingprojects/wildfire-analysis.js"
                 element={<WildfireAnalysis />}
