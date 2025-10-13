@@ -1,186 +1,245 @@
-/* global font */
+/* ===============================
+   GLOBAL STYLES
+   =============================== */
+
+/* Applies to everything on the page */
 * {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace; /* Global monospace font for all elements */
+  box-sizing: border-box; /* Makes width/height include padding and border */
 }
 
-/* define color variables */
-/* :root {
-  --background-light-green: #8AC16A;
-  --dark-green: #249C54;
-  --beautiful-green: #135a48;
-} */
-
-
-main h1 {
-  margin-top: 50px;
-  margin-bottom: 0px;
-  text-align: center;
+/* Defines reusable color variables for the whole site */
+:root {
+  --background-light-green: #8AC16A; /* Light green used for background */
+  --dark-green: #249C54;             /* Dark green for header/nav borders */
+  --beautiful-green: #135a48;        /* Deep accent green (used for buttons or progress bars) */
 }
 
-/* navbar styling */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: auto;
-  border-bottom: 1px solid lightgrey ;
-  padding: 0rem 1.5rem;/* global font */
-  * {
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  
-  /* division line styling */
-  hr {
-    width: 80%;
-    height: 1px;
-    margin: 20px auto;
-    background-color: lightgray;
-  }
-  
-  /* consistent horizontal padding and typography */
-  .content-container {
-    padding: 0px 100px;
-    font-size: 20px;
-    margin: 0px;
-    line-height: 1.6;
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    .content-container {
-      padding: 0px 50px;
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .content-container {
-      padding: 0px 20px;
-    }
-  }
-  
-  /* profile photo */
-  .profile-photo {
-    height: 200px;
-    margin: 20px auto;
-    display: block;
-  }
-  
-  /* progress bar styling */
-  progress {
-    width: 50%;
-    height: 20px;
-    appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid var(--dark-green);
-    border-radius: 3px;
-    background-color: #e0e0e0;
-  }
-  
-  progress::-webkit-progress-value {
-    background-color: #095f2a;
-  }
-  
-  progress::-webkit-progress-bar {
-    background-color: #e0e0e0;
-    border-radius: 100px;
-  }
-  
-  background-color: var(--dark-green);
-  color: white;
-  overflow: hidden;
-}
-
+/* ===============================
+   BODY & PAGE BACKGROUND
+   =============================== */
 body {
-  position: relative;
-  background-image: url('../public/attachments/dnaBorder.png'), url('../public/attachments/dnaBorder.png');
-  background-repeat: repeat-y, repeat-y;
-  background-position: 20px top, right 20px top;
-  background-color: var(--background-light-green);
-  background-size: 50px, 50px;
-  color: white;
-  border: 10px solid var(--dark-green);
-  padding: 0px; /* would be good to adjust for projects page, but it affects the navbar */
-  margin: 0;
-  text-align: center;
-  min-height: 100vh;
-  box-sizing: border-box;
+  position: relative; /* Enables positioned child elements */
+  background-image: url('../public/attachments/dnaBorder.png'), url('../public/attachments/dnaBorder.png'); /* Adds repeating DNA border images */
+  background-repeat: repeat-y, repeat-y; /* Repeats vertically on both sides */
+  background-position: 20px top, right 20px top; /* Places left and right borders */
+  background-color: var(--background-light-green); /* Page background color */
+  background-size: 50px, 50px; /* Sets DNA border image width */
+  color: black; /* Default text color */
+  border: 10px solid var(--dark-green); /* Dark green frame around the entire site */
+  padding: 0; /* Removes default body padding */
+  margin: 0; /* Removes default margin */
+  text-align: center; /* Centers text globally */
+  min-height: 100vh; /* Full viewport height minimum */
 }
 
+/* ===============================
+   HEADER & NAVIGATION BAR
+   =============================== */
+header {
+  display: flex; /* Places logo and nav items side-by-side */
+  align-items: center; /* Vertically centers logo and nav */
+  justify-content: space-between; /* Space between logo and navigation */
+  height: auto; /* Adjusts height based on content */
+  border-bottom: 1px solid lightgrey; /* Thin separator below navbar */
+  padding: 0rem 1.5rem; /* Horizontal padding inside navbar */
+  background-color: var(--dark-green); /* Dark green navbar background */
+  color: white; /* Navbar text color */
+  overflow: hidden; /* Prevents scrollbars in narrow screens */
+}
+
+/* Logo container (clickable leaf icon) */
+.logo {
+  display: inline-block; /* Allows sizing and margin control */
+  position: relative;
+  cursor: auto; /* Non-clickable by default */
+  text-decoration: none; /* Removes underline */
+}
+
+.logo img {
+  height: 50px; /* Logo height */
+  width: 50px; /* Logo width */
+  margin-left: -15px; /* Nudges logo left for alignment */
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Smooth hover animation */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+/* Navigation links inside navbar */
 nav a {
-  display: inline-block;
-  margin: 0px 20px;
-  font-size: 1.3rem;
-  padding: 0px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: white;
-  transition: background-color 0.5s ease;
+  display: inline-block; /* Keeps links inline but with block spacing */
+  margin: 0px 20px; /* Horizontal spacing between links */
+  font-size: 1.3rem; /* Link text size */
+  padding: 0px 10px; /* Padding around link text */
+  border-radius: 6px; /* Rounded hover area */
+  text-decoration: none; /* Removes underline */
+  color: white; /* Default link color */
+  transition: background-color 0.5s ease; /* Smooth hover background transitions */
 }
 
 nav a:hover {
-  color: white;
-  transform: scale(1.05);
+  color: black; /* Keeps text white on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  font-weight: bold; /* Emphasizes hover state */
   transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
-  font-weight: bold;
 }
 
-header .nav-btn { /* dont delete this PLZ it makes the buttons go away when u dont need them*/
-  padding: 0px;
+
+/* Button to toggle nav on small screens (hidden by default) */
+header .nav-btn {
+  padding: 0; /* Removes extra spacing */
   cursor: auto;
   background: transparent;
   border: none;
   outline: none;
   color: white;
-  visibility: hidden;
-  opacity: 0;
-  font-size: 1.8rem;
+  visibility: hidden; /* Hidden until media query triggers */
+  opacity: 0; /* Invisible by default */
+  font-size: 1.8rem; /* Size of hamburger icon */
 }
 
-/* leaf logo */
-.logo {
-  display: inline-block;
-  position: relative;
-  cursor: auto;
-  text-decoration: none;
+/* ===============================
+   MAIN CONTENT
+   =============================== */
+
+/* Main heading styling */
+main h1 {
+  margin-top: 50px; /* Spacing above title */
+  margin-bottom: 0px; /* Removes default bottom margin */
+  text-align: center; /* Centers main title */
 }
 
-.logo img {
-  height: 50px;
-  width: 50px;
-  margin-left: -15px;
-  transition: transform 0.5s ease, background-color 0.5s ease;
+
+/* ===============================
+   RECENT NEWS SECTION
+   =============================== */
+
+.recent-news {
+  padding: 0.1rem 8rem 5.5rem 8rem;
+  margin-top: 4rem; /* Adds breathing room from above sections */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle overlay (optional aesthetic) */
+  border-radius: 10px; /* Smooth rounded edges */
+  color: black; /* Ensures text readable even if background is light */
+
 }
 
-.logo:hover {
-  transform: scale(1.1);
-  transition: background-color 0.5s ease, transform 0.5s ease;
+.recent-news h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-/* small screens */
+.recent-news p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===============================
+   DIVISION LINES
+   =============================== */
+
+/* Horizontal line between sections */
+hr {
+  width: 80%; /* Keeps line narrower than page width */
+  height: 1px; /* Thin divider line */
+  margin: 20px auto; /* Centers horizontally with vertical spacing */
+  background-color: lightgray; /* Light color for visibility */
+  border: none; /* Removes default hr border */
+}
+
+/* ===============================
+   CONTENT CONTAINERS
+   =============================== */
+
+.content-container {
+  padding: 0px 50px; /* Horizontal spacing for content area */
+  font-size: 20px; /* Default text size for main content */
+  margin: 0; /* Resets default margin */
+  line-height: 1.6; /* Comfortable line spacing */
+}
+
+/* ===============================
+   PROGRESS BAR STYLING
+   =============================== */
+
+progress {
+  width: 50%; /* Bar width relative to container */
+  height: 20px; /* Bar height */
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--dark-green); /* Green outline */
+  border-radius: 3px; /* Rounded corners */
+  background-color: #e0e0e0; /* Light grey background */
+}
+
+/* Inner filled portion of progress bar */
+progress::-webkit-progress-value {
+  background-color: var(--beautiful-green); /* Darker green fill */
+}
+
+/* Background track behind progress bar */
+progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 100px;
+}
+
+/* ===============================
+   IMAGES
+   =============================== */
+
+/* Centered profile photo */
+.profile-photo {
+  height: 200px; /* Image height */
+  margin: 20px auto; /* Centers image horizontally */
+  display: block;
+}
+
+/* ===============================
+   UPDATE / CONSTRUCTION MESSAGES
+   =============================== */
+.update-message {
+  padding: 0px 100px; /* Wider margins for announcements */
+  font-size: 20px; /* Same text size as main content */
+  line-height: 1.6; /* Easy readability */
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+/* Medium screens (tablets) */
 @media only screen and (max-width: 1024px) {
+  .content-container {
+    padding: 0px 50px; /* Reduce horizontal padding */
+  }
+
   header .nav-btn {
-    visibility: visible;
+    visibility: visible; /* Show hamburger icon */
     opacity: 1;
   }
 
   header nav {
-    position: fixed;
+    position: fixed; /* Makes nav full screen overlay */
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack links vertically */
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    background-color: var(--dark-green);
+    gap: 1.5rem; /* Space between links */
+    background-color: var(--dark-green); /* Same green as header */
     transition: 1s;
-    transform: translateY(-100vh);
+    transform: translateY(-100vh); /* Hides nav initially */
   }
 
   header .responsive_nav {
-    transform: none;
+    transform: none; /* Reveals nav when toggled */
   }
 
   nav .nav-close-btn {
@@ -190,48 +249,14 @@ header .nav-btn { /* dont delete this PLZ it makes the buttons go away when u do
   }
 
   nav a {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Larger, easier-to-tap links */
   }
 }
 
-
-
-/* consistent division line styling */
-hr {
-  width: 80%;          
-  height: 1px;         
-  margin: 20px auto;   /* centers the line and adds vertical spacing */
-  background-color: lightgray; 
-  border: none;        /* removes default border */
-}
-
-
-.content-container {
-  padding: 0px 50px; /* consistent horizontal padding */
-  font-size: 20px;    /* consistent font size */
-  margin: 0px;        /* no additional margin */
-  line-height: 1.6;   /* consistent line height */
-}
-
-@media only screen and (max-width: 1024px) {
-  .content-container {
-    padding: 0px 50px; /* smaller padding for medium screens */
-  }
-}
-
+/* Small screens (phones) */
 @media only screen and (max-width: 600px) {
   .content-wrapper {
-    padding-left: 1rem;
+    padding-left: 1rem; /* Reduces side padding further */
     padding-right: 1rem;
   }
-}
-
-
-
-
-/* construction msgs */
-.update-message {
-  padding: 0px 100px;
-  font-size: 20px;
-  line-height: 1.6;
 }

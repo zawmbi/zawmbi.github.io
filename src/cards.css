@@ -1,10 +1,4 @@
-
-:root {
-    --background-light-green: #8AC16A;
-    --dark-green: #249C54;
-  }
 /* CARDS FOR THE MAIN PAGsE */
-
 .cards-container {
     display: flex;
     /* grid-template-columns: repeat(4, 1fr); 4 cards per row */
@@ -16,17 +10,13 @@
     /* padding: 5rem 70px; space between cards and the title, and cards and the borders of the site */
   }
 
-
-
-  
   .card {
     background-color: var(--dark-green);
-    color: white;
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center; 
     text-align: center;
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -39,12 +29,13 @@
     font-weight: bold;
     
   }
-  
+  .card:hover a {
+  color: black !important; /* force hover text color to black */
+}
+
   .card a {
     text-decoration: none; /* Remove underline */
-    color: white; /* Ensure text color remains white */
     font-size: 20px;    
-
   }
   
 

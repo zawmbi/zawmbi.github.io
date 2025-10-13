@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './App.css';
+import './style.css';
 import NavBar from './components/NavBar.js';
 import Cards from "./components/Cards";
 import Loading from "./components/Loading";
@@ -43,37 +43,50 @@ function App() {
         <BrowserRouter basename="/">
           <NavBar />
           <div className="content-container">
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <main>
-                    <section className="intro">
-                      <h1>₊˚⊹♡ Welcome to Linda's Portfolio ♡⊹˚₊ </h1>
-                      <h3> This website is always being updated, but contact me for the most recent info if you can't find it here! </h3>
-                      <br></br>
-                      
-                    </section>
-                    <section className="portfolio-cards">
-                      <Cards projects={projects} />
-                    </section>
-                  </main>
-                }
-              />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/:id" element={<ProjectDetail />} />
-              <Route path="/research" element={<Research />} />
-              <Route path="/rosalind" element={<Rosalind />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/youtube" element={<YouTube />} />
-              <Route path="/cv" element={<CV />} />
-              <Route
-                path="/programmingprojects/wildfire-analysis.js"
-                element={<WildfireAnalysis />}
-              />
-            </Routes>
-          </div>
+<Routes>
+  <Route
+    path="/"
+    element={
+      <main>
+        <section className="intro">
+          <h1>₊˚⊹♡ Welcome to Linda's Portfolio ♡⊹˚₊ </h1>
+          <h3> This website is always being updated, but contact me for the most recent info if you can't find it here! </h3>
+          <br />
+        </section>
+
+          <section className="portfolio-cards">
+            <Cards projects={projects} />
+          </section>
+
+          {/* ✅ Move Recent News HERE */}
+          <section className="recent-news">
+            <h1>Recent News</h1>
+            <p>
+              There is now a "Recent News" segment to centralize new things that are happening in my career. 
+              I am currently developing two apps, "PicToBeat" and "Animal Restaurant Progress Tracker" 
+              in addition to MissMap for my research lab, which can all be found in the "Projects" page. 
+              I am also applying to PhD programs for Fall 2026. Yay!
+            </p>
+          </section>
+        </main>
+      }
+    />
+
+    {/* other pages */}
+    <Route path="/projects" element={<Projects />} />
+    <Route path="/projects/:id" element={<ProjectDetail />} />
+    <Route path="/research" element={<Research />} />
+    <Route path="/rosalind" element={<Rosalind />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="/youtube" element={<YouTube />} />
+    <Route path="/cv" element={<CV />} />
+    <Route
+      path="/programmingprojects/wildfire-analysis.js"
+      element={<WildfireAnalysis />}
+    />
+  </Routes>
+</div>
         </BrowserRouter>
 
       )}
