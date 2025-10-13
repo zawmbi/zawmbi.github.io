@@ -60,13 +60,18 @@ function App() {
 
           {/* ✅ Move Recent News HERE */}
           <section className="recent-news">
+
             <h1>Recent News</h1>
+            <span className="news-date">Oct 12, 2025</span>
+
             <p>
               There is now a "Recent News" segment to centralize new things that are happening in my career. 
               I am currently developing two apps, "PicToBeat" and "Animal Restaurant Progress Tracker" 
-              in addition to MissMap for my research lab, which can all be found in the "Projects" page. 
+              in addition to MissMap for my research lab, which can all be found on the "Projects" page. 
               I am also applying to PhD programs for Fall 2026. Yay!
             </p>
+
+            
           </section>
         </main>
       }

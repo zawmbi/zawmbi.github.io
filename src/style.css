@@ -135,8 +135,18 @@ main h1 {
 .recent-news p {
   font-size: 1.3rem;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
 }
+
+.recent-news .news-date {
+  display: block;
+  color: darkgreen;
+  font-size: 1rem;    /* small text */
+  margin-bottom: 4px;   /* a little space before the title */
+  text-align: left;     /* left side (default, but explicit) */
+  font-weight: bold;
+}
+
 
 /* ===============================
    DIVISION LINES

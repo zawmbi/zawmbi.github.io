@@ -162,6 +162,15 @@ export const projects = [
   image: "/attachments/spotify.png",
   link: "/programmingprojects/pictobeat.js"
 },
+  {
+  id: 19,
+  title: "Animal Restaurant Progress Tracker",
+  skills: ["Design", "iOS & Android App Development", "Data Management", "Flutter"],
+  languages: ["Dart"],
+  dateCompleted: "2026-09-30", 
+  image: "/attachments/animalrestaurant.jpg",
+  link: "/programmingprojects/animalrestaurant.js"
+},
 
 
   ];

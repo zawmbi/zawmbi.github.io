@@ -110,9 +110,10 @@
 
 
 .project-title {
-  color: white;
+  color: black;
   padding: 5px 5px;
   font-size: 100px;
+  font-weight: bold;
 }
 
 .project-description {

@@ -10,7 +10,7 @@ const ProjectDetail = () => {
   const project = projects.find((p) => location.pathname.endsWith(p.link));
 
   if (!project) {
-    return <Typography variant="h4">Project not found</Typography>;
+    return <Typography variant="h4">Project not uploaded here yet! Please check github.</Typography>;
   }
 
   return (
