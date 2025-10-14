@@ -41,12 +41,13 @@ header {
   align-items: center; /* Vertically centers logo and nav */
   justify-content: space-between; /* Space between logo and navigation */
   height: auto; /* Adjusts height based on content */
-  border-bottom: 1px solid lightgrey; /* Thin separator below navbar */
   padding: 0rem 1.5rem; /* Horizontal padding inside navbar */
   background-color: var(--dark-green); /* Dark green navbar background */
   color: white; /* Navbar text color */
   overflow: hidden; /* Prevents scrollbars in narrow screens */
 }
+
+
 
 /* Logo container (clickable leaf icon) */
 .logo {
@@ -110,6 +111,13 @@ main h1 {
   margin-top: 50px; /* Spacing above title */
   margin-bottom: 0px; /* Removes default bottom margin */
   text-align: center; /* Centers main title */
+  font-size: 35px;
+  padding: 1rem 2rem;
+}
+
+main h3 {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
 }
 
 

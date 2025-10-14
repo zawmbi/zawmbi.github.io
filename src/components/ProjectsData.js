@@ -6,7 +6,7 @@ export const projects = [
       languages: ["React", "HTML/CSS", "JavaScript"],
       dateCompleted: "2029-04-04",
       image: "/attachments/portfolioTitle.png",
-      link: "./portfolio-project",
+      link: "/programmingprojects/portfolio-project.js",
 
     },
     {
