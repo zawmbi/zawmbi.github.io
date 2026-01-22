@@ -13,8 +13,10 @@ import Contact from "./pages/Contact.js";
 import ProjectDetail from "./pages/ProjectDetail.js";
 import WildfireAnalysis from "./pages/programmingprojects/wildfire-analysis.js";
 import PortfolioProject from "./pages/programmingprojects/portfolio-project.js";
+import PictoBeat from "./pages/programmingprojects/pictobeat.js";
 import CV from "./pages/CV.js";
 import YouTube from "./pages/Youtube.js";
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,8 +34,8 @@ function App() {
               <Route path="/" element={
                 <main>
                   <section className="intro">
-                    <h1>₊˚⊹♡ Welcome to Linda's Portfolio ♡⊹˚₊ </h1>
-                    <h3>This website is always being updated, but contact me for the most recent info if you can't find it here!</h3>
+                    <h1> Welcome to Linda's Portfolio</h1>
+                    <h3>This website is always being updated, but <a href="/contact">contact me</a> for the most recent info if you can't find it here!</h3>
                     <br />
                   </section>
                   <section className="portfolio-cards"><Cards projects={projects} /></section>
@@ -54,6 +56,7 @@ function App() {
               <Route path="/cv" element={<CV />} />
               <Route path="/programmingprojects/wildfire-analysis.js" element={<WildfireAnalysis />} />
               <Route path="/programmingprojects/portfolio-project.js" element={<PortfolioProject />} />
+              <Route path="/programmingprojects/pictobeat.js" element={<PictoBeat />} />
             </Routes>
           </div>
         </BrowserRouter>

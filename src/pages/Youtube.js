@@ -8,7 +8,7 @@ function YouTube() {
                 <h2>My YouTube Channel</h2>
                 <h3>
                     This is my YouTube channel! There is almost nothing on it yet, but I do 
-                    enjoy the videos I make when I have time.
+                    enjoy making videos when I have time.
                 </h3>
 
                 <div className="youtube-card">
