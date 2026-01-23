@@ -8,32 +8,18 @@ export default function Contact() {
   const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
 const onSubmit = (e) => {
-e.preventDefault();
+  e.preventDefault();
 
-const subject = encodeURIComponent(
+  const subject = encodeURIComponent(
     `Portfolio inquiry from ${form.name || "(no name)"}`
-);
-const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`);
+  );
+  const body = encodeURIComponent(`${form.message}\n\n— ${form.name}\n${form.email}`);
+  const href = `mailto:LJMansour02@gmail.com?subject=${subject}&body=${body}`;
 
-// cache-buster so the URL is always unique
-const nonce = Date.now(); // or a simple counter you increment
-const href = `mailto:LJMansour02@gmail.com?subject=${subject}&body=${body}&t=${nonce}`;
+  // Open mailto link
+  window.location.href = href;
 
-// use a temporary <a> to ensure a fresh user-gesture navigation
-const a = document.createElement("a");
-a.href = href;
-a.style.display = "none";
-document.body.appendChild(a);
-a.click();
-document.body.removeChild(a);
-
-// optional: also assign as a fallback (some browsers prefer this)
-setTimeout(() => {
-    // only try if no focus change happened; harmless if it did
-    try { window.location.assign(href); } catch {}
-}, 50);
-
-setSent(true);
+  setSent(true);
 };
 
   return (
