@@ -5,8 +5,6 @@ function About() {
     return (
         <div>
             <main className="about-text">
-                <h1>About Me</h1>
-                <hr className="faint-divider" />
                 <div className="image-container">
                 <img src={`${process.env.PUBLIC_URL}/attachments/aboutme.PNG`} alt="Linda" className="profile-photo" />
                 </div>

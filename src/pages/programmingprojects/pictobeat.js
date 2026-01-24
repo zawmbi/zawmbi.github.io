@@ -40,6 +40,18 @@ export default function PictoBeat() {
         </Box>
       </Box>
 
+      {/* Tech Stack at Top - Centered */}
+      <Box sx={{ marginBottom: "30px", textAlign: "center" }}>
+        <Typography variant="h6" sx={{ marginBottom: "10px", fontWeight: "bold" }}>
+          Tech Stack
+        </Typography>
+        <Box sx={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
+          <Chip label="React" />
+          <Chip label="Spotify API" />
+
+        </Box>
+      </Box>
+
       <Typography
         variant="body1"
         sx={{ marginBottom: "20px", lineHeight: 1.8 }}
@@ -60,18 +72,6 @@ export default function PictoBeat() {
       >
         Despite its demise, PictoBeat served as a valuable learning experience in API integration, React development, and building projects that depend on third-party services.
       </Typography>
-
-      <Box sx={{ marginTop: "30px" }}>
-        <Typography variant="h6" sx={{ marginBottom: "10px", fontWeight: "bold" }}>
-          Tech Stack
-        </Typography>
-        <Box sx={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
-          <Chip label="React" />
-          <Chip label="Spotify API" />
-          <Chip label="Visual Analysis" />
-          <Chip label="Machine Learning" />
-        </Box>
-      </Box>
     </Box>
   );
 }

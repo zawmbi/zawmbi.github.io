@@ -40,7 +40,7 @@ header {
   display: flex; /* Places logo and nav items side-by-side */
   align-items: center; /* Vertically centers logo and nav */
   justify-content: space-between; /* Space between logo and navigation */
-  height: auto; /* Adjusts height based on content */
+  height: 60px; /* Fixed height to prevent shifting */
   padding: 0rem 1.5rem; /* Horizontal padding inside navbar */
   background-color: var(--dark-green); /* Dark green navbar background */
   color: white; /* Navbar text color */
@@ -78,7 +78,21 @@ nav a {
   border-radius: 6px; /* Rounded hover area */
   text-decoration: none; /* Removes underline */
   color: white; /* Default link color */
-  transition: background-color 0.5s ease; /* Smooth hover background transitions */
+  transition: background-color 0.5s ease, transform 0.3s ease; /* Smooth hover background transitions */
+  font-weight: normal;
+}
+
+/* Prevent layout shift from bold text */
+nav a::after {
+  content: attr(data-text);
+  content: attr(aria-label);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  font-weight: bold;
+  display: block;
 }
 
 nav a:hover {
@@ -86,6 +100,21 @@ nav a:hover {
   transform: scale(1.05); /* Slight zoom effect */
   font-weight: bold; /* Emphasizes hover state */
   transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+/* Active page styling */
+nav a.active {
+  border-bottom: 3px solid var(--dark-green);
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* Mobile current page display - hidden on desktop */
+.current-page-mobile {
+  display: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 
@@ -239,6 +268,11 @@ progress::-webkit-progress-bar {
     visibility: visible; /* Show hamburger icon */
     opacity: 1;
   }
+  
+  /* Show current page name on mobile */
+  .current-page-mobile {
+    display: block;
+  }
 
   header nav {
     position: fixed; /* Makes nav full screen overlay */
@@ -251,7 +285,9 @@ progress::-webkit-progress-bar {
     justify-content: center;
     align-items: center;
     gap: 1.5rem; /* Space between links */
-    background-color: var(--dark-green); /* Same green as header */
+    background-color: rgba(36, 156, 84, 0.6); /* 60% opaque green */
+    backdrop-filter: blur(10px); /* Blur background */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     transition: 1s;
     transform: translateY(-100vh); /* Hides nav initially */
   }
@@ -264,10 +300,12 @@ progress::-webkit-progress-bar {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    opacity: 1; /* Keep button fully opaque */
   }
 
   nav a {
     font-size: 1.5rem; /* Larger, easier-to-tap links */
+    opacity: 1; /* Keep links fully opaque */
   }
 }
 

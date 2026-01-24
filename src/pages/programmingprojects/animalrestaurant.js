@@ -44,6 +44,21 @@ export default function AnimalRestaurantTracker() {
         </Link>
       </Box>
 
+      {/* Tech Stack at Top - Centered */}
+      <Box sx={{ marginBottom: "30px", textAlign: "center" }}>
+        <Typography variant="h6" sx={{ marginBottom: "10px", fontWeight: "bold" }}>
+          Tech Stack
+        </Typography>
+        <Box sx={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
+          <Chip label="Flutter" />
+          <Chip label="Dart" />
+          <Chip label="iOS & Android App Development" />
+          <Chip label="JSON Database Management" />
+          <Chip label="Data Management" />
+          <Chip label="UI/UX Design" />
+        </Box>
+      </Box>
+
       <Box
         sx={{
           display: "flex",
@@ -146,21 +161,6 @@ export default function AnimalRestaurantTracker() {
           <Typography variant="body2" sx={{ textAlign: "center" }}>
             {currentImageIndex + 1} / {screenshots.length}
           </Typography>
-
-          {/* Tech Stack */}
-          <Box sx={{ width: "100%" }}>
-            <Typography variant="h6" sx={{ marginBottom: "10px", fontWeight: "bold" }}>
-              Tech Stack
-            </Typography>
-            <Box sx={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
-              <Chip label="Flutter" />
-              <Chip label="Dart" />
-              <Chip label="iOS & Android App Development" />
-              <Chip label="JSON Database Management" />
-              <Chip label="Data Management" />
-              <Chip label="UI/UX Design" />
-            </Box>
-          </Box>
         </Box>
       </Box>
     </Box>

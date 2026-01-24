@@ -25,6 +25,20 @@ const PortfolioProject = () => {
         </Link>
       </Box>
 
+      {/* Tech Stack at Top - Centered */}
+      <Box sx={{ marginBottom: "30px", textAlign: "center" }}>
+        <Typography variant="h6" sx={{ marginBottom: "10px", fontWeight: "bold" }}>
+          Tech Stack
+        </Typography>
+        <Box sx={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
+          <Chip label="React" />
+          <Chip label="React Router" />
+          <Chip label="Material-UI" />
+          <Chip label="CSS" />
+          <Chip label="JavaScript" />
+        </Box>
+      </Box>
+
       <Typography
         variant="body1"
         sx={{ marginBottom: "20px", lineHeight: 1.8 }}
@@ -45,19 +59,6 @@ const PortfolioProject = () => {
       >
         
       </Typography>
-
-      <Box sx={{ marginTop: "30px" }}>
-        <Typography variant="h6" sx={{ marginBottom: "10px", fontWeight: "bold" }}>
-          Tech Stack
-        </Typography>
-        <Box sx={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
-          <Chip label="React" />
-          <Chip label="React Router" />
-          <Chip label="Material-UI" />
-          <Chip label="CSS" />
-          <Chip label="JavaScript" />
-        </Box>
-      </Box>
     </Box>
   );
 };

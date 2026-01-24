@@ -17,6 +17,7 @@ import PictoBeat from "./pages/programmingprojects/pictobeat.js";
 import CV from "./pages/CV.js";
 import YouTube from "./pages/Youtube.js";
 import AnimalRestaurantTracker from "./pages/programmingprojects/animalrestaurant.js";
+import MissMap from "./pages/programmingprojects/missmap.js";
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
               <Route path="/programmingprojects/portfolio-project.js" element={<PortfolioProject />} />
               <Route path="/programmingprojects/pictobeat.js" element={<PictoBeat />} />
               <Route path="/programmingprojects/animalrestaurant.js" element={<AnimalRestaurantTracker />} />
+              <Route path="/programmingprojects/missmap.js" element={<MissMap />} />
             </Routes>
           </div>
         </BrowserRouter>

@@ -5,8 +5,7 @@ function CV() {
     return (
         <div className="cv-container">
             <main>
-                <h2>Here is the most recent version of my CV</h2>
-                <h3>Last updated in August 2025</h3>
+                <h3>Last Update: August 2025</h3>
 
                 {/* Download Button */}
                 <a 
