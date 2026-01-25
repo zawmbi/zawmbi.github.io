@@ -6,9 +6,6 @@ function Research() {
   return (
     <div>
       <main>
-        
-  <h1>Research</h1>
-  <hr className="faint-divider" />
 
   {/* Botany 2025 Poster */}
 

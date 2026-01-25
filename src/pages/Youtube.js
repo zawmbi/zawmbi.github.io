@@ -5,7 +5,6 @@ function YouTube() {
     return (
         <div className="youtube-container">
             <main>
-                <h2>My YouTube Channel</h2>
                 <h3>
                     This is my YouTube channel! There is almost nothing on it yet, but I do 
                     enjoy making videos when I have time.
@@ -22,7 +21,6 @@ function YouTube() {
                     </a>
                 </div>
 
-                {/* Optional Embedded Channel Preview */}
                 <div className="youtube-embed">
                     <iframe
                         width="560"
