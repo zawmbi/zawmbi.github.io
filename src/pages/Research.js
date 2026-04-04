@@ -20,7 +20,7 @@ function Research() {
       alt="Botany 2025 Poster"
       className="research-card-image"
     />
-  </a>
+  </a> 
   <div className="image-caption">Click to the image to view the full poster.</div>
 
   <div className="research-card-text">
