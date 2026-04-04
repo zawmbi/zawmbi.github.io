@@ -65,7 +65,7 @@ export const projects = [
     },
     {
       id: 8,
-      title: "Find the Shortest Word Latter",
+      title: "Find the Shortest Word Ladder",
       skills: ["Dynamic Programming"],
       languages: ["C"],
       dateCompleted: "2023-11-05",
