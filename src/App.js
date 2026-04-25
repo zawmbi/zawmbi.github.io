@@ -47,7 +47,7 @@ function App() {
                     <p>I am approaching the end of my post-baccalaureate at UIC, and have built so many things during my time here! My biggest academic project, PhyLabeler, is functioning and ready for further expansion. Outside of school, I am building and pitching monitr.xyz which is a news aggregator focused on curation while reducing bias. I also have begun developing iOS apps Syllabus to Calendar and Attendance Tracker which are currently under review for the App Store. During this time, I am continuing to TA for BIOS 120! </p>
                   
                     <span className="news-date">Oct 12, 2025</span>
-                    <p>There is now a "Recent News" segment to centralize new things that are happening in my career. I am currently developing two apps, "PicToBeat" and "Animal Restaurant Progress Tracker" in addition to MissMap for my research lab, which can all be found on the "Projects" page. I am also applying to PhD programs for Fall 2026. Yay!</p>
+                    <p>There is now a "Recent News" segment to centralize new things that are happening in my career. I am currently developing two apps, "PicToBeat" and "Animal Restaurant Progress Tracker" in addition to MissMap for my research lab, which can all be found on the "Projects" page. I am also working on <a href="https://github.com/zawmbi/phylabeler" target="_blank" rel="noopener noreferrer">PhyLabeler</a> and <a href="https://monitr.xyz" target="_blank" rel="noopener noreferrer">monitr.xyz</a>. I am also applying to PhD programs for Fall 2026. Yay!</p>
                   </section>
                 </main>
               }/>
@@ -73,5 +73,4 @@ function App() {
 }
 
 export default App;
-
 

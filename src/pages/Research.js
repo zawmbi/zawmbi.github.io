@@ -6,6 +6,7 @@ function Research() {
   return (
     <div>
       <main>
+        <div className="research-grid">
 
   {/* Botany 2025 Poster */}
 
@@ -34,7 +35,7 @@ function Research() {
 
 {/* MissMap Pipeline */}
 <div className="research-card">
-  <a class="no-icon"
+  <a className="no-icon"
     href="https://github.com/zawmbi/MissMap" 
     target="_blank"
     rel="noopener noreferrer"
@@ -47,7 +48,7 @@ function Research() {
   </a>
   <div className="image-caption">
     <a
-      class="no-icon"
+      className="no-icon"
       href="https://github.com/zawmbi/MissMap" 
       target="_blank"
       rel="noopener noreferrer"
@@ -121,7 +122,8 @@ function Research() {
 
 
 
-</main>
+        </div>
+      </main>
 
     </div>
   );

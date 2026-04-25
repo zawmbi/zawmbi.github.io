@@ -1,11 +1,10 @@
-.research-card {
-  background-color: white;
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.research-grid {
+  width: min(1400px, 94vw);
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: start;
 }
 
 .research-card-image {
@@ -28,8 +27,8 @@
   border: 2px solid var(--dark-green);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  max-width: 700px;
-  margin: 3rem auto;
+  width: 100%;
+  margin: 0;
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -64,4 +63,11 @@
 .image-caption a {
   color: white;
   text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+    width: min(700px, 94vw);
+  }
 }
